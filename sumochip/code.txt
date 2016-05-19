@@ -1,0 +1,4 @@
+sumorobot.right()
+sleep(1)
+sumorobot.left()
+sleep(1)

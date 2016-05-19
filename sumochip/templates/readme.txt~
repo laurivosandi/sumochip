@@ -1,0 +1,26 @@
+DONE:﻿
+- juhtnupud
+- koodi genereerimine
+- blocly genereeritud kood codemirrorisse
+- websocket
+
+- nodemcu-build.com dev ja crypto moodul -> uus firmware
+- websocket https://gist.github.com/creationix/079e11345249525c7e2e
+- javascript ja html läpparist
+
+SETUP:
+apt-get install python-dev
+apt-get install python-pip
+pip install gevent
+pip install flask-sockets
+pip install gevent-websocket
+
+- veebiliidesse võrgu värk: sättida kliendiks või ap-ks
+
+ip: 192.168.12.121
+
+
+
+
+
+

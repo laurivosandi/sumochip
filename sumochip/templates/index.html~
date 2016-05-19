@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sumoroboti juhtimine ja programmeerimine</title>
+    <link rel="stylesheet" href="/static/basic.css">
+
+</head>
+<body>
+    <div id="wrapper" class="expand">
+
+        <div id="loading">
+            <img src="/static/img/robot.png" alt="Sumoroboti programmeerimine" />
+        </div>
+
+        <div id="content" class="expand" style="display:none;">
+
+            <div id="navbar">
+                    <a style="float:left;" onclick="switchToBlockly()">Programmeerimine</a>
+                    <a style="float:right;" onclick="switchToManual()">Juhtimine</a>                        
+            </div>
+
+
+            <div id="roboview">  
+                    
+                   <div class="clearDiv"></div>
+
+                    <table id="status"">
+                        <tr><td>
+                                <div id="battery"><div id="charge"><div id = "capacity"></div></div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Olek: <span id="socketStatus"></span></td> 
+                        </tr>
+                        <tr>
+                            <td><button id="btnconnect" onclick="wsConnect()">Ühenda uuesti</button></td> 
+                        </tr>
+                    </table>
+
+                    <div class="clearDiv"></div>
+
+                    <table id="enemySensorTable">
+                        <tr>
+                            <td colspan="2" id="enemyFrontview"></td>
+                        </tr>
+                        <tr>
+                            <td id="enemyLeftview"></td>
+                            <td id="enemyRightview"></td> 
+                        </tr>
+                    </table>    
+
+                    <div id="lineSensor">
+                        <img id="robotimg" src="/static/img/robot.png" alt="ROBOT" />
+                    </div>
+                    <div id="hidderDiv"></div>
+
+                  
+
+            </div>
+
+            <div id="pages" class="expand">
+
+                <!-- MANUAL CONTROL -->
+                <div id="manual" onkeydown="console.log('vajutati klahvi')">
+                    <div class="expand">
+                        <table id="manualTable">
+                            <tr>
+                                <td></td>
+                                <td><button ontouchstart="move(1)" ontouchend="stop()" onmousedown="move(1)" onmouseup="stop()" class="controlButton" id="manualbtn1" value="EDASI">  </button></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><button ontouchstart="move(4)" ontouchend="stop()" onmousedown="move(4)" onmouseup="stop()" class="controlButton" id="manualbtn4"> </button></td>
+                                <td><button ontouchstart="move(2)" ontouchend="stop()" onmousedown="move(2)" onmouseup="stop()" class="controlButton" id="manualbtn2"></button></td>                            
+                                <td><button ontouchstart="move(3)" ontouchend="stop()" onmousedown="move(3)" onmouseup="stop()" class="controlButton" id="manualbtn3"></button></td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+
+
+                <!-- Programmeerimine --->
+                <div id="program" class="expand">
+                    <img id="switchProg" src="/static/img/switch.png" alt="Vaheta programmeerimisviisi" class="pull-left" onclick="toggleProgrammingStyle()"/>                                                                                                                                                                                                                             
+                    <div id="progMenu">
+                        <a class="btn" onclick="uploadCode()"> Salvesta kood </a>
+                        <a class="btn" onclick="getSavedCode()"> Lae kood </a>
+                        <a class="btn" onclick="runCode()"> Start </a>   
+                        <a class="btn" onclick="stopCode()"> Stop </a>   
+                    </div>
+
+
+                    <!-- CODEMIRROR -->
+                    <div id="codemirror">
+                        <div id="codemirrorDiv"></div>
+                    </div>
+
+                    <!--- BLOCKLY -->
+                    <div id="blockly" style="height:100%;width:100%">
+                        <div id="blocklyArea"></div>
+                    </div>
+                </div>
+
+            </div> <!-- pages -->
+
+        </div>   <!-- content -->
+    </div>  <!-- wrapper -->
+
+    <!-- Blockly scripts -->
+
+    <script src="/static/blockly/blockly_compressed.js"></script>
+    <script src="/static/blockly/blocks_compressed.js"></script>
+    <script src="/static/blockly/javascript_compressed.js"></script>
+    <script src="/static/blockly/python_compressed.js"></script>
+    <script srv="/static/blockly/lua_compressed.js"></script>
+    <script src="/static/blockly/et.js"></script>
+    
+
+    <!-- Codemirror scripts-->
+    
+    <link rel="stylesheet" href="/static/codemirror/codemirror.css">
+    <script src="/static/codemirror/codemirror.js"></script>
+    <script src="/static/codemirror/lua.js"></script>
+    <script src="/static/codemirror/python.js"></script>        
+
+    <!-- Basic scripts-->
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
