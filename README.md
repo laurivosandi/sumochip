@@ -14,12 +14,11 @@ robot yourself with the prices stated in the [bill of materials](doc/bom.md) pag
 Robotics Club of Estonian IT College provides kits within EU which saves
 you the hassle of purchasing invidual components online.
 
-| Description | Price |
-|-|
-| SumoCHIP PCB and solderable components only | 20 EUR + recommended donation |
-| All components except [C.H.I.P.](http://getchip.com/products/chip), servos and wheels | 30 EUR + recommended donation |
+| Description                                                    | Price                         |
+|----------------------------------------------------------------|-------------------------------|
+| SumoCHIP PCB and solderable components only                    | 20 EUR + recommended donation |
 | Everything except [C.H.I.P.](http://getchip.com/products/chip) | 40 EUR + recommended donation |
-| All in one batteries included kit | 50 EUR + recommended donation |
+| All in one batteries included kit                              | 50 EUR + recommended donation |
 
 When ordering please specify whether you want PCB to be soldered or not,
 soldered board adds extra 10 EUR to the price. We can also ship custom

@@ -4,7 +4,7 @@ To save money and to get best out of the learning process you can order componen
 
 
 | Image | Description | Amount | Row total |
-|-|
+|-|-|-|-|
 | ![CHIP](img/chip.png) | [C.H.I.P.](http://getchip.com/products/chip) from NextThingCo | 10pcs | 94.32 EUR |
 | ![Servo](img/plastic-gear-servo.png) | Plastic geared continuous servo motor [FS90R](http://www.aliexpress.com/item/5-pcs-9g-Mini-360-Degree-Continuous-Rotation-Robot-Servo-FS90R/32621562033.html)  | 20pcs (4 lots of 5) | 63.63 EUR |
 | ![Spoked wheel](img/spoked-wheel.png) | [Spoked wheel](http://www.aliexpress.com/item/10-pcs-wheel-for-9g-360-Degree-Continuous-Rotation-Micro-Robot-Servo-FS90R/32609379555.html) | 20pcs (2 lots of 10) | 34.70 EUR |
@@ -23,7 +23,7 @@ To save money and to get best out of the learning process you can order componen
 Optional upgrades:
 
 | Image | Description | Amount | Item price | Subtotal | Price difference |
-|-|
+|-|-|-|-|-|-|
 | ![Servo](img/metal-gear-servo.png) | Metal geared continuous servo motor | 2pcs | 4.86 EUR | 9.72 EUR | +3.4 EUR |
 | ![Servo](img/wheel.png) | [Solid servo wheel](http://www.aliexpress.com/item/Smart-car-tires-steering-wheel-tire-tire-rubber-tire-tracking-DIY-model-toy-car-accessories-aperture/2055170090.html) | 2pcs | 2.19 EUR | 4.38 EUR | +0.94 EUR |
 | ![Sharp](img/sharp.png) | Infrared distance sensor [Sharp GP2Y0A21Y0F](http://www.aliexpress.com/item/10PCS-LOT-GP2Y0A21YK0F-100-NEW-SHARP-2Y0A21-10-80cm-Infrared-distance-sensor-INCLUDING-WIRES-FREE-SHIPPING/1670003593.html) | 2pcs | 3.24 EUR | 6.48 EUR |
@@ -32,6 +32,6 @@ Optional upgrades:
 PCB alternatives, shipping to EU included:
 
 | Image | Description | Amount | Item price | Subtotal |
-|-|
+|-|-|-|-|-|
 | ![SumoCHIP](img/sumochip.png) | SumoCHIP daughterboard from [DirtyPCB-s](http://dirtypcbs.com/) | 1pcs | 2.22 EUR | 2.22 EUR |
 
