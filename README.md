@@ -6,7 +6,7 @@ SumoCHIP is designed for teaching soldering, electronics, programming
 and networking. We kept SumoCHIP daughterboard PCB design single-sided so it
 would be easy to etch at home or school.
 
-[nice 3D model goes here]
+![Sumo](doc/img/sumo.png)
 
 ##Kits
 
