@@ -15,8 +15,9 @@ To save money and to get best out of the learning process you can order componen
 | ![SMD resistor](img/smd-resistor.jpg) | Surface mounted [resistors](http://www.aliexpress.com/item/100-New-SMD-Resistance-500PCS-Lot-0805-Combination-set-620R-12K-5-25Kinds-Wholesale-Electronic-500PCS/32420120683.html)  | 200pcs               |  1.67 EUR |
 | ...                                   | [40-pin 2.54mm header](http://www.aliexpress.com/item/Free-shipping-1Set-20PCS-40Pin-2-54mm-Single-Row-Straight-Male-Pin-Header-Connector-Strip-For/32552698181.html)               | 20pcs                |  2.82 EUR |
 | ![SMD LED](img/smd-led.jpg)           | Surface mounted [LED](http://www.aliexpress.com/item/5-colors-x20pcs-100pcs-SMD-0805-led-Super-Bright-Red-Green-Blue-Yellow-White-Water-Clear/32542417127.html)                     | 50pcs                |  1.01 EUR |
-|                                       |                                                                                                                                                                                     | Total cost:          |       TBD |
-|                                       |                                                                                                                                                                                     | Single robot cost:   |   ~25 EUR |
+| ![2N7000](img/2n7000.jpg)             | 60V 200mA N-channel [MOSFET](http://www.aliexpress.com/item/12pcs-2N7000-MOSFET-N-CH-60V-200MA-TO-92-NEW-GOOD-QUALITY/32390351935.html)                                             | 10pcs                |  0.85 EUR |
+|                                       |                                                                                                                                                                                     | Total cost:          |  275  EUR |
+|                                       |                                                                                                                                                                                     | Single robot cost:   |  27.5 EUR |
 
 ##Alternative components
 
