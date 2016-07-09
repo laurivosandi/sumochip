@@ -7,7 +7,7 @@ Following people have contributed to the SumoCHIP project in one way or another:
 
   * Web interface development
   * Battery statistics
-  * Betwork management
+  * Network management
 
 * **Bruno Boavida**
 
