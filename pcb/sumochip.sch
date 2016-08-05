@@ -1,0 +1,1034 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:sumochip-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 8268 11693 portrait
+encoding utf-8
+Sheet 1 1
+Title "SumoCHIP daughterboard"
+Date "12 jul 2016"
+Rev ""
+Comp "IT Kolledži Robootikaklubi"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED-RESCUE-sumochip D2
+U 1 1 576E5E5D
+P 5000 7650
+F 0 "D2" H 5000 7750 50  0000 C CNN
+F 1 "LED" H 5000 7550 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5000 7650 50  0001 C CNN
+F 3 "" H 5000 7650 50  0000 C CNN
+	1    5000 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R3
+U 1 1 576E5E8C
+P 4450 7650
+F 0 "R3" V 4550 7650 50  0000 C CNN
+F 1 "220" V 4450 7650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4380 7650 50  0001 C CNN
+F 3 "" H 4450 7650 50  0000 C CNN
+	1    4450 7650
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X03 Servo1
+U 1 1 576E7889
+P 6300 7750
+F 0 "Servo1" V 6400 7750 50  0000 C CNN
+F 1 "Servo1" V 6400 7750 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 6300 7750 50  0001 C CNN
+F 3 "" H 6300 7750 50  0000 C CNN
+	1    6300 7750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 576E79A4
+P 6300 8300
+F 0 "#PWR01" H 6300 8150 50  0001 C CNN
+F 1 "+5V" H 6300 8440 50  0000 C CNN
+F 2 "" H 6300 8300 50  0000 C CNN
+F 3 "" H 6300 8300 50  0000 C CNN
+	1    6300 8300
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND-RESCUE-sumochip #PWR02
+U 1 1 576E79CA
+P 6400 8550
+F 0 "#PWR02" H 6400 8300 50  0001 C CNN
+F 1 "GND" H 6400 8400 50  0000 C CNN
+F 2 "" H 6400 8550 50  0000 C CNN
+F 3 "" H 6400 8550 50  0000 C CNN
+	1    6400 8550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 Servo2
+U 1 1 576E89C3
+P 6900 7750
+F 0 "Servo2" V 7000 7750 50  0000 C CNN
+F 1 "Servo2" V 7000 7750 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 6900 7750 50  0001 C CNN
+F 3 "" H 6900 7750 50  0000 C CNN
+	1    6900 7750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-sumochip R4
+U 1 1 576E9F3E
+P 4450 8000
+F 0 "R4" V 4550 8000 50  0000 C CNN
+F 1 "220" V 4450 8000 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4380 8000 50  0001 C CNN
+F 3 "" H 4450 8000 50  0000 C CNN
+	1    4450 8000
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D3
+U 1 1 576E9F6D
+P 5000 8000
+F 0 "D3" H 5000 8100 50  0000 C CNN
+F 1 "LED" H 5000 7900 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5000 8000 50  0001 C CNN
+F 3 "" H 5000 8000 50  0000 C CNN
+	1    5000 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D4
+U 1 1 576EA05D
+P 5000 8350
+F 0 "D4" H 5000 8450 50  0000 C CNN
+F 1 "LED" H 5000 8250 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5000 8350 50  0001 C CNN
+F 3 "" H 5000 8350 50  0000 C CNN
+	1    5000 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R5
+U 1 1 576EA0AA
+P 4450 8350
+F 0 "R5" V 4550 8350 50  0000 C CNN
+F 1 "220" V 4450 8350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4380 8350 50  0001 C CNN
+F 3 "" H 4450 8350 50  0000 C CNN
+	1    4450 8350
+	0    1    1    0   
+$EndComp
+$Comp
+L R-RESCUE-sumochip R6
+U 1 1 576EAAA8
+P 4450 8700
+F 0 "R6" V 4550 8700 50  0000 C CNN
+F 1 "220" V 4450 8700 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4380 8700 50  0001 C CNN
+F 3 "" H 4450 8700 50  0000 C CNN
+	1    4450 8700
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D5
+U 1 1 576EAAF7
+P 5000 8700
+F 0 "D5" H 5000 8800 50  0000 C CNN
+F 1 "LED" H 5000 8600 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5000 8700 50  0001 C CNN
+F 3 "" H 5000 8700 50  0000 C CNN
+	1    5000 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P6
+U 1 1 576EB27E
+P 3800 8150
+F 0 "P6" H 3800 7900 50  0000 C CNN
+F 1 "P5" V 3900 8150 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 3800 8150 50  0001 C CNN
+F 3 "" H 3800 8150 50  0000 C CNN
+	1    3800 8150
+	-1   0    0    1   
+$EndComp
+Text Label 4350 7450 0    60   ~ 0
+Diagnostic_LED-s
+$Comp
+L CONN_01X03 P4
+U 1 1 576EC840
+P 2800 9950
+F 0 "P4" H 2800 10150 50  0000 C CNN
+F 1 "Power2" V 2900 9950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 2800 9950 50  0001 C CNN
+F 3 "" H 2800 9950 50  0000 C CNN
+	1    2800 9950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-sumochip #PWR03
+U 1 1 576ECC5E
+P 2600 10200
+F 0 "#PWR03" H 2600 9950 50  0001 C CNN
+F 1 "GND" H 2600 10050 50  0000 C CNN
+F 2 "" H 2600 10200 50  0000 C CNN
+F 3 "" H 2600 10200 50  0000 C CNN
+	1    2600 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 LiPo1
+U 1 1 576ECD79
+P 1350 9900
+F 0 "LiPo1" H 1350 10050 50  0000 C CNN
+F 1 "3.7V" V 1450 9900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02" H 1350 9900 50  0001 C CNN
+F 3 "" H 1350 9900 50  0000 C CNN
+	1    1350 9900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 Serial1
+U 1 1 576EE451
+P 2350 8200
+F 0 "Serial1" H 2350 8400 50  0001 C CNN
+F 1 "Serial" V 2450 8200 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x03" H 2350 8200 50  0001 C CNN
+F 3 "" H 2350 8200 50  0000 C CNN
+	1    2350 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V-RESCUE-sumochip #PWR04
+U 1 1 576F6EE0
+P 1900 8000
+F 0 "#PWR04" H 1900 7850 50  0001 C CNN
+F 1 "+3.3V" H 1900 8140 50  0000 C CNN
+F 2 "" H 1900 8000 50  0000 C CNN
+F 3 "" H 1900 8000 50  0000 C CNN
+	1    1900 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-sumochip #PWR05
+U 1 1 576F6F21
+P 2350 8550
+F 0 "#PWR05" H 2350 8300 50  0001 C CNN
+F 1 "GND" H 2350 8400 50  0000 C CNN
+F 2 "" H 2350 8550 50  0000 C CNN
+F 3 "" H 2350 8550 50  0000 C CNN
+	1    2350 8550
+	1    0    0    -1  
+$EndComp
+Text Label 1900 9550 0    60   ~ 0
+LiPo
+Text Label 1850 7750 0    60   ~ 0
+Serial
+$Comp
+L R-RESCUE-sumochip R1
+U 1 1 577ED9D5
+P 1000 1650
+F 0 "R1" H 1150 1650 50  0000 C CNN
+F 1 "100k" V 1000 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 930 1650 50  0001 C CNN
+F 3 "" H 1000 1650 50  0000 C CNN
+	1    1000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R2
+U 1 1 577EDBF3
+P 1800 1650
+F 0 "R2" H 1950 1650 50  0000 C CNN
+F 1 "100k" V 1800 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1730 1650 50  0001 C CNN
+F 3 "" H 1800 1650 50  0000 C CNN
+	1    1800 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R7
+U 1 1 577EDEFD
+P 2600 1650
+F 0 "R7" H 2750 1650 50  0000 C CNN
+F 1 "100k" V 2600 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2530 1650 50  0001 C CNN
+F 3 "" H 2600 1650 50  0000 C CNN
+	1    2600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R8
+U 1 1 577EDF83
+P 6900 1650
+F 0 "R8" H 6750 1650 50  0000 C CNN
+F 1 "100k" V 6900 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6830 1650 50  0001 C CNN
+F 3 "" H 6900 1650 50  0000 C CNN
+	1    6900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R9
+U 1 1 577EDFEC
+P 3400 1650
+F 0 "R9" H 3550 1650 50  0000 C CNN
+F 1 "100k" V 3400 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3330 1650 50  0001 C CNN
+F 3 "" H 3400 1650 50  0000 C CNN
+	1    3400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO_NPN-RESCUE-sumochip Q1
+U 1 1 577EE2A2
+P 900 2600
+F 0 "Q1" H 1000 2600 50  0000 L CNN
+F 1 "OPTO_NPN" H 1050 2500 50  0001 L CNN
+F 2 "LEDs:LED-3MM" H 900 2600 50  0001 C CNN
+F 3 "" H 900 2600 50  0000 C CNN
+	1    900  2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO_NPN-RESCUE-sumochip Q2
+U 1 1 577EE41B
+P 1700 2600
+F 0 "Q2" H 1800 2600 50  0000 L CNN
+F 1 "OPTO_NPN" H 1850 2500 50  0001 L CNN
+F 2 "LEDs:LED-3MM" H 1700 2600 50  0001 C CNN
+F 3 "" H 1700 2600 50  0000 C CNN
+	1    1700 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO_NPN-RESCUE-sumochip Q3
+U 1 1 577EE495
+P 2500 2650
+F 0 "Q3" H 2600 2650 50  0000 L CNN
+F 1 "OPTO_NPN" H 2650 2550 50  0001 L CNN
+F 2 "LEDs:LED-3MM" H 2500 2650 50  0001 C CNN
+F 3 "" H 2500 2650 50  0000 C CNN
+	1    2500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO_NPN-RESCUE-sumochip Q4
+U 1 1 577EE586
+P 6800 2650
+F 0 "Q4" H 6900 2650 50  0000 L CNN
+F 1 "OPTO_NPN" H 6950 2550 50  0001 L CNN
+F 2 "LEDs:LED-3MM" H 6800 2650 50  0001 C CNN
+F 3 "" H 6800 2650 50  0000 C CNN
+	1    6800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO_NPN-RESCUE-sumochip Q5
+U 1 1 577EE69A
+P 3300 2650
+F 0 "Q5" H 3400 2650 50  0000 L CNN
+F 1 "OPTO_NPN" H 3450 2550 50  0001 L CNN
+F 2 "LEDs:LED-3MM" H 3300 2650 50  0001 C CNN
+F 3 "" H 3300 2650 50  0000 C CNN
+	1    3300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-sumochip #PWR06
+U 1 1 577F3070
+P 1000 3200
+F 0 "#PWR06" H 1000 2950 50  0001 C CNN
+F 1 "GND" H 1000 3050 50  0000 C CNN
+F 2 "" H 1000 3200 50  0000 C CNN
+F 3 "" H 1000 3200 50  0000 C CNN
+	1    1000 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V-RESCUE-sumochip #PWR07
+U 1 1 577F3125
+P 1000 1100
+F 0 "#PWR07" H 1000 950 50  0001 C CNN
+F 1 "+3.3V" H 1000 1240 50  0000 C CNN
+F 2 "" H 1000 1100 50  0000 C CNN
+F 3 "" H 1000 1100 50  0000 C CNN
+	1    1000 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R10
+U 1 1 577F8B79
+P 3500 5650
+F 0 "R10" H 3650 5650 50  0000 C CNN
+F 1 "100" V 3500 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3430 5650 50  0001 C CNN
+F 3 "" H 3500 5650 50  0000 C CNN
+	1    3500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R11
+U 1 1 577F9882
+P 4300 5050
+F 0 "R11" H 4150 5050 50  0000 C CNN
+F 1 "220" V 4300 5050 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4230 5050 50  0001 C CNN
+F 3 "" H 4300 5050 50  0000 C CNN
+	1    4300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R12
+U 1 1 577F991C
+P 5900 5650
+F 0 "R12" H 5750 5650 50  0000 C CNN
+F 1 "100" V 5900 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5830 5650 50  0001 C CNN
+F 3 "" H 5900 5650 50  0000 C CNN
+	1    5900 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R13
+U 1 1 577F99A5
+P 6700 5650
+F 0 "R13" H 6550 5650 50  0000 C CNN
+F 1 "100" V 6700 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6630 5650 50  0001 C CNN
+F 3 "" H 6700 5650 50  0000 C CNN
+	1    6700 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R14
+U 1 1 577F9A33
+P 5100 5650
+F 0 "R14" H 4950 5650 50  0000 C CNN
+F 1 "100" V 5100 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5030 5650 50  0001 C CNN
+F 3 "" H 5100 5650 50  0000 C CNN
+	1    5100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D1
+U 1 1 577FB611
+P 3500 5050
+F 0 "D1" V 3500 5200 50  0000 C CNN
+F 1 "IR LED" H 3500 4900 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 3500 5050 50  0001 C CNN
+F 3 "" H 3500 5050 50  0000 C CNN
+	1    3500 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D6
+U 1 1 577FBDE9
+P 4300 5650
+F 0 "D6" V 4300 5500 50  0000 C CNN
+F 1 "IR LED" H 4300 5500 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 4300 5650 50  0001 C CNN
+F 3 "" H 4300 5650 50  0000 C CNN
+	1    4300 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D7
+U 1 1 577FBF09
+P 5900 5050
+F 0 "D7" V 5900 4900 50  0000 C CNN
+F 1 "IR LED" H 5900 4900 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5900 5050 50  0001 C CNN
+F 3 "" H 5900 5050 50  0000 C CNN
+	1    5900 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D8
+U 1 1 577FBFA1
+P 6700 5050
+F 0 "D8" V 6700 4900 50  0000 C CNN
+F 1 "IR LED" H 6700 4900 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 6700 5050 50  0001 C CNN
+F 3 "" H 6700 5050 50  0000 C CNN
+	1    6700 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-RESCUE-sumochip D9
+U 1 1 577FC052
+P 5100 5050
+F 0 "D9" V 5100 4900 50  0000 C CNN
+F 1 "IR LED" H 5100 4900 50  0001 C CNN
+F 2 "LEDs:LED-3MM" H 5100 5050 50  0001 C CNN
+F 3 "" H 5100 5050 50  0000 C CNN
+	1    5100 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V-RESCUE-sumochip #PWR08
+U 1 1 577FD3D4
+P 1100 4600
+F 0 "#PWR08" H 1100 4450 50  0001 C CNN
+F 1 "+3.3V" H 1100 4740 50  0000 C CNN
+F 2 "" H 1100 4600 50  0000 C CNN
+F 3 "" H 1100 4600 50  0000 C CNN
+	1    1100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q6
+U 1 1 57800561
+P 1200 6300
+F 0 "Q6" H 1500 6300 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 1850 6250 50  0001 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 1400 6400 50  0001 C CNN
+F 3 "" H 1200 6300 50  0000 C CNN
+	1    1200 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND-RESCUE-sumochip #PWR09
+U 1 1 57800F9A
+P 1100 6750
+F 0 "#PWR09" H 1100 6500 50  0001 C CNN
+F 1 "GND" H 1100 6600 50  0000 C CNN
+F 2 "" H 1100 6750 50  0000 C CNN
+F 3 "" H 1100 6750 50  0000 C CNN
+	1    1100 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R15
+U 1 1 5783805F
+P 1100 5650
+F 0 "R15" H 950 5650 50  0000 C CNN
+F 1 "100" V 1100 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1030 5650 50  0001 C CNN
+F 3 "" H 1100 5650 50  0000 C CNN
+	1    1100 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L R-RESCUE-sumochip R16
+U 1 1 578380D2
+P 1900 5650
+F 0 "R16" H 1750 5650 50  0000 C CNN
+F 1 "100" V 1900 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1830 5650 50  0001 C CNN
+F 3 "" H 1900 5650 50  0000 C CNN
+	1    1900 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L R-RESCUE-sumochip R17
+U 1 1 578380F5
+P 2700 5650
+F 0 "R17" H 2550 5650 50  0000 C CNN
+F 1 "100" V 2700 5650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2630 5650 50  0001 C CNN
+F 3 "" H 2700 5650 50  0000 C CNN
+	1    2700 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P10
+U 1 1 57839843
+P 6300 2650
+F 0 "P10" H 6300 2800 50  0000 C CNN
+F 1 "P10" V 6400 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 6300 2650 50  0001 C CNN
+F 3 "~" H 6300 2650 50  0000 C CNN
+	1    6300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P11
+U 1 1 57839A9F
+P 5500 2650
+F 0 "P11" H 5500 2800 50  0000 C CNN
+F 1 "P11" V 5600 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5500 2650 50  0001 C CNN
+F 3 "~" H 5500 2650 50  0000 C CNN
+	1    5500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P12
+U 1 1 57839B38
+P 4700 2650
+F 0 "P12" H 4700 2800 50  0000 C CNN
+F 1 "P12" V 4800 2650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 4700 2650 50  0001 C CNN
+F 3 "~" H 4700 2650 50  0000 C CNN
+	1    4700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R18
+U 1 1 57839E56
+P 4500 1650
+F 0 "R18" H 4350 1650 50  0000 C CNN
+F 1 "100k" V 4500 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4430 1650 50  0001 C CNN
+F 3 "" H 4500 1650 50  0000 C CNN
+	1    4500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R19
+U 1 1 57839E70
+P 5300 1650
+F 0 "R19" H 5450 1650 50  0000 C CNN
+F 1 "100k" V 5300 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5230 1650 50  0001 C CNN
+F 3 "" H 5300 1650 50  0000 C CNN
+	1    5300 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-sumochip R20
+U 1 1 57839E76
+P 6100 1650
+F 0 "R20" H 5950 1650 50  0000 C CNN
+F 1 "100k" V 6100 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6030 1650 50  0001 C CNN
+F 3 "" H 6100 1650 50  0000 C CNN
+	1    6100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P13
+U 1 1 5783A29B
+P 2900 5050
+F 0 "P13" H 2900 5200 50  0000 C CNN
+F 1 "P13" V 3000 5050 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2900 5050 50  0001 C CNN
+F 3 "~" H 2900 5050 50  0000 C CNN
+	1    2900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P14
+U 1 1 5783A2B4
+P 2100 5050
+F 0 "P14" H 2100 5200 50  0000 C CNN
+F 1 "P14" V 2200 5050 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2100 5050 50  0001 C CNN
+F 3 "~" H 2100 5050 50  0000 C CNN
+	1    2100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P15
+U 1 1 5783A2C3
+P 1300 5050
+F 0 "P15" H 1300 5200 50  0000 C CNN
+F 1 "P15" V 1400 5050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1300 5050 50  0001 C CNN
+F 3 "~" H 1300 5050 50  0000 C CNN
+	1    1300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X05 P7-8
+U 1 1 5794782F
+P 3950 2150
+F 0 "P7-8" H 3950 2473 50  0000 C CNN
+F 1 "CONN_02X05" H 3950 2474 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 3950 950 50  0001 C CNN
+F 3 "" H 3950 950 50  0000 C CNN
+	1    3950 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P1
+U 1 1 57949912
+P 1700 8350
+F 0 "P1" H 1619 8017 50  0000 C CNN
+F 1 "CONN_01X05" H 1619 8016 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 1619 8016 50  0001 C CNN
+F 3 "" H 1700 8350 50  0000 C CNN
+	1    1700 8350
+	-1   0    0    1   
+$EndComp
+Text Label 3600 1100 0    60   ~ 0
+Phototransistors
+Text Label 4000 4500 0    60   ~ 0
+IR_LED-s
+Text Label 6500 7450 0    60   ~ 0
+Servos
+$Comp
+L GND-RESCUE-sumochip #PWR010
+U 1 1 5795453A
+P 1850 6750
+F 0 "#PWR010" H 1850 6500 50  0001 C CNN
+F 1 "GND" H 1850 6600 50  0000 C CNN
+F 2 "" H 1850 6750 50  0000 C CNN
+F 3 "" H 1850 6750 50  0000 C CNN
+	1    1850 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT_x2 Power1
+U 1 1 579649D5
+P 2000 10050
+F 0 "Power1" H 2000 9800 50  0000 C CNN
+F 1 "Switch_SPDT_x2" H 2000 10284 50  0001 C CNN
+F 2 "Connect:PINHEAD1-3" H 2000 10284 50  0001 C CNN
+F 3 "" H 2000 10050 50  0000 C CNN
+	1    2000 10050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 579A220C
+P 2050 6350
+F 0 "P2" H 2050 6500 50  0000 C CNN
+F 1 "LED-toggle" V 2150 6350 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2050 6350 50  0001 C CNN
+F 3 "" H 2050 6350 50  0000 C CNN
+	1    2050 6350
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P5
+U 1 1 579A22E7
+P 6550 8950
+F 0 "P5" V 6550 8750 50  0000 C CNN
+F 1 "CONN_01X02" V 6650 8950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 6550 8950 50  0001 C CNN
+F 3 "" H 6550 8950 50  0000 C CNN
+	1    6550 8950
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V-RESCUE-sumochip #PWR011
+U 1 1 579A2959
+P 5400 7600
+F 0 "#PWR011" H 5400 7450 50  0001 C CNN
+F 1 "+3.3V" H 5400 7740 50  0000 C CNN
+F 2 "" H 5400 7600 50  0000 C CNN
+F 3 "" H 5400 7600 50  0000 C CNN
+	1    5400 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P3
+U 1 1 B57865FD
+P 7150 8950
+F 0 "P3" V 7150 8750 50  0000 C CNN
+F 1 "Power1" V 7250 8950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7150 8950 50  0001 C CNN
+F 3 "" H 7150 8950 50  0000 C CNN
+	1    7150 8950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 4700 6700 4700
+Wire Wire Line
+	5900 4700 5900 4850
+Wire Wire Line
+	4300 4700 4300 4800
+Wire Wire Line
+	5900 5250 5900 5400
+Wire Wire Line
+	6700 5250 6700 5400
+Wire Wire Line
+	3500 5250 3500 5400
+Wire Wire Line
+	2700 5100 2700 5400
+Wire Wire Line
+	1900 5400 1900 5100
+Wire Wire Line
+	1100 5100 1100 5400
+Wire Wire Line
+	4200 8700 4000 8700
+Wire Wire Line
+	4700 8700 4800 8700
+Wire Wire Line
+	4700 8350 4800 8350
+Wire Wire Line
+	4700 8000 4800 8000
+Wire Wire Line
+	4700 7650 4800 7650
+Wire Wire Line
+	4000 7650 4200 7650
+Connection ~ 5400 8000
+Wire Wire Line
+	5400 8000 5200 8000
+Wire Wire Line
+	4200 8350 4300 8350
+Wire Wire Line
+	4200 8000 4300 8000
+Connection ~ 1900 4700
+Wire Wire Line
+	1900 4700 1900 5000
+Connection ~ 2700 4700
+Wire Wire Line
+	2700 4700 2700 5000
+Connection ~ 6100 3050
+Wire Wire Line
+	5300 3050 5300 2700
+Wire Wire Line
+	6100 3050 6100 2700
+Connection ~ 6100 2150
+Connection ~ 5300 2050
+Connection ~ 4500 1950
+Wire Wire Line
+	2150 8450 2350 8450
+Connection ~ 2150 8450
+Wire Wire Line
+	2350 8450 2350 8550
+Wire Wire Line
+	2000 8100 2150 8100
+Wire Wire Line
+	2150 8300 2150 8550
+Wire Wire Line
+	5400 7600 5400 8700
+Wire Wire Line
+	4200 8100 4200 8000
+Wire Wire Line
+	4000 8100 4200 8100
+Wire Wire Line
+	4200 8200 4000 8200
+Wire Wire Line
+	4200 8350 4200 8200
+Wire Wire Line
+	1100 6500 1100 6750
+Connection ~ 5900 4700
+Connection ~ 5100 4700
+Connection ~ 4300 4700
+Connection ~ 3500 4700
+Connection ~ 3400 3050
+Connection ~ 2600 3050
+Wire Wire Line
+	3400 3050 3400 2850
+Connection ~ 1800 3050
+Wire Wire Line
+	2600 3050 2600 2850
+Connection ~ 1000 3050
+Wire Wire Line
+	1800 3050 1800 2800
+Connection ~ 3400 1200
+Connection ~ 2600 1200
+Connection ~ 1800 1200
+Connection ~ 1000 1200
+Wire Wire Line
+	1000 2800 1000 3200
+Connection ~ 5400 8350
+Wire Wire Line
+	5400 8700 5200 8700
+Wire Wire Line
+	5400 8350 5200 8350
+Wire Wire Line
+	5200 7650 5400 7650
+Wire Wire Line
+	4000 8700 4000 8300
+Wire Wire Line
+	4000 8000 4000 7650
+Wire Wire Line
+	6300 7950 6300 8300
+Wire Wire Line
+	6400 7950 6400 8550
+Wire Wire Line
+	1000 1100 1000 1400
+Wire Wire Line
+	1800 1400 1800 1200
+Wire Wire Line
+	2600 1200 2600 1400
+Wire Wire Line
+	3400 1200 3400 1400
+Wire Wire Line
+	1000 1900 1000 2400
+Wire Wire Line
+	1800 1900 1800 2400
+Wire Wire Line
+	2600 1900 2600 2450
+Wire Wire Line
+	3400 1900 3400 2450
+Wire Wire Line
+	1900 8000 1900 8150
+Connection ~ 6900 2250
+Wire Wire Line
+	4500 1200 4500 1400
+Wire Wire Line
+	5300 1200 5300 1400
+Wire Wire Line
+	6100 1200 6100 1400
+Connection ~ 6100 1200
+Connection ~ 5300 1200
+Wire Wire Line
+	4500 1900 4500 2600
+Wire Wire Line
+	4500 3050 4500 2700
+Connection ~ 5300 3050
+Wire Wire Line
+	5300 1900 5300 2600
+Wire Wire Line
+	6100 1900 6100 2600
+Wire Wire Line
+	6900 1900 6900 2450
+Wire Wire Line
+	1000 1200 6900 1200
+Connection ~ 4500 1200
+Wire Wire Line
+	1000 3050 6900 3050
+Connection ~ 4500 3050
+Wire Wire Line
+	4200 1950 4500 1950
+Wire Wire Line
+	4200 2050 5300 2050
+Wire Wire Line
+	4200 2150 6100 2150
+Wire Wire Line
+	1100 6000 6700 6000
+Wire Wire Line
+	1900 5900 1900 6000
+Connection ~ 1900 6000
+Wire Wire Line
+	2700 5900 2700 6000
+Connection ~ 2700 6000
+Wire Wire Line
+	3500 5900 3500 6000
+Connection ~ 3500 6000
+Wire Wire Line
+	4300 6000 4300 5850
+Connection ~ 4300 6000
+Wire Wire Line
+	5900 6000 5900 5900
+Connection ~ 5900 6000
+Wire Wire Line
+	2150 8550 1900 8550
+Wire Wire Line
+	2000 8450 1900 8450
+Wire Wire Line
+	2000 8100 2000 8450
+Wire Wire Line
+	2050 8350 1900 8350
+Wire Wire Line
+	2150 8200 2050 8200
+Wire Wire Line
+	2050 8200 2050 8350
+Wire Wire Line
+	6800 7950 6800 8050
+Wire Wire Line
+	6800 8050 6600 8050
+Wire Wire Line
+	6600 8050 6600 8750
+Wire Wire Line
+	6500 8750 6500 8050
+Wire Wire Line
+	6500 8050 6200 8050
+Wire Wire Line
+	6200 8050 6200 7950
+Wire Wire Line
+	1850 6300 1400 6300
+Wire Wire Line
+	1850 6400 1850 6750
+Wire Wire Line
+	3400 1950 3700 1950
+Wire Wire Line
+	4200 2250 6900 2250
+Connection ~ 3400 1950
+Wire Wire Line
+	3700 2050 1000 2050
+Connection ~ 1000 2050
+Wire Wire Line
+	3700 2150 1800 2150
+Connection ~ 1800 2150
+Wire Wire Line
+	3700 2250 2600 2250
+Connection ~ 2600 2250
+Connection ~ 5400 7650
+Wire Wire Line
+	6300 8200 7100 8200
+Wire Wire Line
+	7100 8200 7100 8750
+Connection ~ 6300 8200
+Wire Wire Line
+	6900 7950 6900 8200
+Connection ~ 6900 8200
+Wire Wire Line
+	7200 8150 7200 8750
+Wire Wire Line
+	6400 8150 7200 8150
+Connection ~ 6400 8150
+Wire Wire Line
+	7000 7950 7000 8150
+Connection ~ 7000 8150
+Wire Wire Line
+	2600 9850 1550 9850
+Wire Wire Line
+	2600 10050 2600 10200
+Wire Wire Line
+	2300 10050 2600 10050
+Wire Wire Line
+	1700 9950 1550 9950
+Wire Wire Line
+	3700 2350 3700 3050
+Connection ~ 3700 3050
+Wire Wire Line
+	4200 2350 4200 3050
+Connection ~ 4200 3050
+Wire Wire Line
+	6900 3050 6900 2850
+Wire Wire Line
+	6900 1200 6900 1400
+Wire Wire Line
+	1100 4600 1100 5000
+Wire Wire Line
+	1100 5900 1100 6100
+Wire Wire Line
+	4300 5300 4300 5450
+Wire Wire Line
+	5100 4700 5100 4850
+Wire Wire Line
+	5100 5900 5100 6000
+Connection ~ 5100 6000
+Wire Wire Line
+	6700 4700 6700 4850
+Wire Wire Line
+	6700 6000 6700 5900
+Connection ~ 1100 6000
+Wire Wire Line
+	3500 4700 3500 4850
+Connection ~ 1100 4700
+Wire Wire Line
+	5100 5250 5100 5400
+$EndSCHEMATC

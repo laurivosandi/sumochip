@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Kicad
+*.kicad_pcb-bak
+pcb/export
+pcb/*-panel*
+*.bak
