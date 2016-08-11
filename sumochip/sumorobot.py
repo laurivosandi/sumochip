@@ -44,7 +44,7 @@ VALID_PINS = {"motor_left",
               "line_right",
               "line_front",
               "green_led",
-              "yelow_led",
+              "yellow_led",
               "red_led",
               "blue_led"}
 
@@ -394,9 +394,9 @@ if __name__ == "__main__":
     s = Sumorobot("config/sumochip.ini")
     from time import sleep
     s.sensor_power = True
-    s.leds_on()
-    s.io.red_led.value = True
-    s.io.yelow_led.value = True
+    s.io.red_led.value = False
+    s.io.yellow_led.value = False
+
     while False:
         for x in range(-100, 100, 1):
             s.leftMotor.speed = x/100.0
