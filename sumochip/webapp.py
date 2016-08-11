@@ -10,7 +10,11 @@ sumorobot = Sumorobot()
 codeThread = None
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
+try:
+    with open("/etc/machine-id", "r") as fh:
+        app.config['SECRET_KEY'] = fh.read()
+except:
+    app.config['SECRET_KEY'] = 'secret!'
 sockets = Sockets(app)
 
 @app.route('/')
