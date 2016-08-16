@@ -397,6 +397,39 @@ if __name__ == "__main__":
     s.io.red_led.value = False
     s.io.yellow_led.value = False
 
+    t=0.5
+    while True:
+        s.io.blue_led.value = False
+        s.io.red_led.value = True
+        s.io.yellow_led.value = True
+        s.io.green_led.value = True
+        sleep(t)
+        s.io.blue_led.value = True
+        s.io.red_led.value = False
+        s.io.yellow_led.value = True
+        s.io.green_led.value = True
+        sleep(t)
+        s.io.blue_led.value = True
+        s.io.red_led.value = True
+        s.io.yellow_led.value = False
+        s.io.green_led.value = True
+        sleep(t)
+        s.io.blue_led.value = True
+        s.io.red_led.value = True
+        s.io.yellow_led.value = True
+        s.io.green_led.value = False
+        sleep(t)
+        s.io.blue_led.value = True
+        s.io.red_led.value = True
+        s.io.yellow_led.value = False
+        s.io.green_led.value = True
+        sleep(t)
+        s.io.blue_led.value = True
+        s.io.red_led.value = False
+        s.io.yellow_led.value = True
+        s.io.green_led.value = True
+        sleep(t)
+
     while False:
         for x in range(-100, 100, 1):
             s.leftMotor.speed = x/100.0
