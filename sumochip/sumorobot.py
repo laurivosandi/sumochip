@@ -268,7 +268,7 @@ class Sumorobot(object):
             for pin_name in python_io_pins:
                 self.io[pin_name] = PythonIOPin(config.get("PythonIO", pin_name))
         else:
-            non_python_io_pins = set()
+            non_python_io_pins = non_chip_io_pins - used_pins
 
 
         unconfigured_pins = non_python_io_pins
