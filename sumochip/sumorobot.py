@@ -181,9 +181,15 @@ class PythonIOMotor(Thread): # This class generated PWM signal necessary for ser
 
 class Sumorobot(object):
 
-    def __init__(self, config_file):
+    def __init__(self, config_file=None):
         self.io = AttributeDict()
         self.config = config = ConfigParser()
+
+        if not config_file:
+            if os.path.exists("/etc/sumorobot/sumorobot.ini"):
+                config_file = "/etc/sumorobot/sumorobot.ini"
+            if os.path.exists("sumorobot.ini"):
+                config_file = "sumorobot.ini"
 
         if sys.version_info[0] < 3:
             import codecs
@@ -220,7 +226,7 @@ class Sumorobot(object):
                 except NoOptionError:
                     freq, duty_min, duty_max = 500, 49, 90
 
-                self.leftMotor = ChipIOMotor(config.get("ChipIO", "motor_left"),
+                self.motor_left = ChipIOMotor(config.get("ChipIO", "motor_left"),
                                              int(freq), float(duty_min), float(duty_max),
                                              stop_on_zero)
                 chip_io_pins.remove("motor_left")
@@ -230,7 +236,7 @@ class Sumorobot(object):
                     freq, duty_min, duty_max = config.get("ChipIO", "motor_right_cal").split(",")
                 except NoOptionError:
                     freq, duty_min, duty_max = 500, 49, 90
-                self.rightMotor = ChipIOMotor(config.get("ChipIO", "motor_right"),
+                self.motor_right = ChipIOMotor(config.get("ChipIO", "motor_right"),
                                             int(freq), float(duty_min), float(duty_max),
                                             stop_on_zero)
                 chip_io_pins.remove("motor_right")
@@ -252,11 +258,11 @@ class Sumorobot(object):
             non_python_io_pins = non_chip_io_pins - python_io_pins
 
             if "motor_left" in python_io_pins:
-                self.leftMotor = PythonIOMotor(config.get("PythonIO", "motor_left"))
+                self.motor_left = PythonIOMotor(config.get("PythonIO", "motor_left"))
                 python_io_pins.remove("motor_left")
 
             if "motor_right" in python_io_pins:
-                self.rightMotor = PythonIOMotor(config.get("PythonIO", "motor_left"))
+                self.motor_right = PythonIOMotor(config.get("PythonIO", "motor_right"))
                 python_io_pins.remove("motor_right")
 
             for pin_name in python_io_pins:
@@ -272,27 +278,34 @@ class Sumorobot(object):
         print("NoIO pins: ", ", ".join(str(pin) for pin in unconfigured_pins))
 
         from pprint import pprint
-        print("{:<15}: {}".format("leftMotor", type(self.leftMotor).__name__))
-        print("{:<15}: {}".format("rightMotor", type(self.rightMotor).__name__))
+        print("{:<15}: {}".format("motor_left", type(self.motor_left).__name__))
+        print("{:<15}: {}".format("motor_right", type(self.motor_right).__name__))
         for name, pin in self.io.items():
             print("{:<15}: {}".format(name, type(pin).__name__))
 
+    def __getattr__(self, name):
+        if name in self.io:
+            return self.io[name]
+        else:
+            raise AttributeError("'{}' object has no I/O pin named '{}'".format(type(self).__name__, name))
+
+
         self.isAutonomous = False
     def forward(self):
-        self.leftMotor.speed = 1
-        self.rightMotor.speed = -1
+        self.motor_left.speed = 1
+        self.motor_right.speed = -1
     def back(self):
-        self.leftMotor.speed = -1
-        self.rightMotor.speed = 1
+        self.motor_left.speed = -1
+        self.motor_right.speed = 1
     def stop(self):
-        self.leftMotor.speed = 0
-        self.rightMotor.speed = 0
+        self.motor_left.speed = 0
+        self.motor_right.speed = 0
     def right(self):
-        self.leftMotor.speed = 1
-        self.rightMotor.speed = 1
+        self.motor_left.speed = 1
+        self.motor_right.speed = 1
     def left(self):
-        self.leftMotor.speed = -1
-        self.rightMotor.speed = -1
+        self.motor_left.speed = -1
+        self.motor_right.speed = -1
 
     def leds_on(self):
         for led in (pin for pin in self.io if pin.endswith("led")):
@@ -391,61 +404,86 @@ def isEnemy(value):
             return False
 
 if __name__ == "__main__":
-    s = Sumorobot("config/sumochip.ini")
+    s = Sumorobot()
     from time import sleep
+
+    print("powering on the sensors")
     s.sensor_power = True
-    s.io.red_led.value = False
-    s.io.yellow_led.value = False
 
-    t=0.5
+    t=0.1
+    print("LED test", end="")
+    for x in range(10):
+        s.blue_led.value = False
+        s.red_led.value = True
+        s.yellow_led.value = True
+        s.green_led.value = True
+        sleep(t)
+        s.blue_led.value = True
+        s.red_led.value = False
+        s.yellow_led.value = True
+        s.green_led.value = True
+        sleep(t)
+        s.blue_led.value = True
+        s.red_led.value = True
+        s.yellow_led.value = False
+        s.green_led.value = True
+        sleep(t)
+        s.blue_led.value = True
+        s.red_led.value = True
+        s.yellow_led.value = True
+        s.green_led.value = False
+        sleep(t)
+        s.blue_led.value = True
+        s.red_led.value = True
+        s.yellow_led.value = False
+        s.green_led.value = True
+        sleep(t)
+        s.blue_led.value = True
+        s.red_led.value = False
+        s.yellow_led.value = True
+        s.green_led.value = True
+        sleep(t)
+        print(".", end="")
+        sys.stdout.flush()
+    print()
+
+
+    print("motor_left test")
+    for x in range(-100, 100, 1):
+        s.motor_left.speed = x/100.0
+        print(x, end="   \r")
+        sys.stdout.flush()
+        sleep(0.01)
+    for x in range(100, -100, -1):
+        s.motor_left.speed = x/100.0
+        print(x, end="   \r")
+        sys.stdout.flush()
+        sleep(0.01)
+    print()
+    s.motor_left.speed = 0
+
+    print("motor_right test")
+    for x in range(-100, 100, 1):
+        s.motor_right.speed = x/100.0
+        print(x, end="   \r")
+        sys.stdout.flush()
+        sleep(0.01)
+    for x in range(100, -100, -1):
+        s.motor_right.speed = x/100.0
+        print(x, end="   \r")
+        sys.stdout.flush()
+        sleep(0.01)
+    print()
+    s.motor_left.speed = 0
+
+
+    print("Entering play mode")
     while True:
-        s.io.blue_led.value = False
-        s.io.red_led.value = True
-        s.io.yellow_led.value = True
-        s.io.green_led.value = True
-        sleep(t)
-        s.io.blue_led.value = True
-        s.io.red_led.value = False
-        s.io.yellow_led.value = True
-        s.io.green_led.value = True
-        sleep(t)
-        s.io.blue_led.value = True
-        s.io.red_led.value = True
-        s.io.yellow_led.value = False
-        s.io.green_led.value = True
-        sleep(t)
-        s.io.blue_led.value = True
-        s.io.red_led.value = True
-        s.io.yellow_led.value = True
-        s.io.green_led.value = False
-        sleep(t)
-        s.io.blue_led.value = True
-        s.io.red_led.value = True
-        s.io.yellow_led.value = False
-        s.io.green_led.value = True
-        sleep(t)
-        s.io.blue_led.value = True
-        s.io.red_led.value = False
-        s.io.yellow_led.value = True
-        s.io.green_led.value = True
-        sleep(t)
+        right = not bool(s.enemy_right.value)
+        left = not bool(s.enemy_left.value)
 
-    while False:
-        for x in range(-100, 100, 1):
-            s.leftMotor.speed = x/100.0
-            print(x)
-            sleep(0.01)
-        for x in range(100, -100, -1):
-            s.leftMotor.speed = x/100.0
-            print(x)
-            sleep(0.01)
-
-    while True:
-        right = not bool(s.io["enemy_right"].value)
-        left = not bool(s.io["enemy_left"].value)
-
-        s.io.blue_led.value = not left
-        s.io.green_led.value = not right
+        s.blue_led.value = not left
+        s.green_led.value = not right
 
 
         if right and left:
