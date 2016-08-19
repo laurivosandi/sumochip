@@ -432,21 +432,11 @@ if __name__ == "__main__":
         print(x, end="   \r")
         sys.stdout.flush()
         sleep(0.01)
-    for x in range(100, -100, -1):
-        s.motor_left.speed = x/100.0
-        print(x, end="   \r")
-        sys.stdout.flush()
-        sleep(0.01)
     print()
     s.motor_left.speed = 0
 
     print("motor_right test")
     for x in range(-100, 100, 1):
-        s.motor_right.speed = x/100.0
-        print(x, end="   \r")
-        sys.stdout.flush()
-        sleep(0.01)
-    for x in range(100, -100, -1):
         s.motor_right.speed = x/100.0
         print(x, end="   \r")
         sys.stdout.flush()
@@ -457,8 +447,11 @@ if __name__ == "__main__":
 
     print("Entering play mode")
     while True:
-        right = not bool(s.enemy_right.value)
-        left = not bool(s.enemy_left.value)
+        right = not s.enemy_right.value
+        left = not s.enemy_left.value
+        line_right = not s.line_right.value
+        line_front = not s.line_front.value
+        line_left = not s.line_left.value
 
         s.blue_led.value = not left
         s.green_led.value = not right
@@ -467,13 +460,19 @@ if __name__ == "__main__":
         if right and left:
             s.forward()
         elif left:
-            s.right()
-        elif right:
             s.left()
+        elif right:
+            s.right()
         else:
             s.stop()
 
-        print(1 if right else 0, 1 if left else 0, end="\r")
+        print(1 if right else 0,
+              1 if left else 0,
+              "  ",
+              1 if line_right else 0,
+              1 if line_front else 0,
+              1 if line_left else 0,
+              end="\r")
         sys.stdout.flush()
 
         sleep(0.01)
