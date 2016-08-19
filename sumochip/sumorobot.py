@@ -324,54 +324,32 @@ class Sumorobot(object):
 
 
 class SensorThread(Thread):
-    def __init__(self, ws):
+    def __init__(self, ws, sumorobot):
         Thread.__init__(self)
         self.daemon = True
         self.ws = ws
+        self.sumorobot = sumorobot
         self.start()
     def run(self):
         while True:
             if self.ws and not self.ws.closed:
-                self.ws.send(json.dumps(getData()))
+                self.ws.send(json.dumps(self.getData()))
                 sleep(0.2)
 
+    def getData(self):
+        stats = {}
+        s = self.sumorobot
+        #for filename in os.listdir("/sys/power/axp_pmu/battery/"):
+        #    with open ("/sys/power/axp_pmu/battery/" + filename) as fh:
+        #        stats[filename] = int(fh.read())
 
-def getData():
-    createFiles()
-    stats = {}
-    for filename in os.listdir("/sys/power/axp_pmu/battery/"):
-        with open ("/sys/power/axp_pmu/battery/" + filename) as fh:
-            stats[filename] = int(fh.read())
-    with open(os.path.join(enemyRightPath, "value")) as fh:
-        stats["enemy_right"] = int(fh.read())
-    with open(os.path.join(enemyLeftPath, "value")) as fh:
-        stats["enemy_left"] = int(fh.read())
-    with open(os.path.join(lineLeftPath, "value")) as fh:
-        stats["line_left"] = int(fh.read())
-    with open(os.path.join(lineRightPath, "value")) as fh:
-        stats["line_right"] = int(fh.read())
-    with open(os.path.join(lineFrontPath, "value")) as fh:
-        stats["line_front"] = int(fh.read())
-    return stats
+        stats["enemy_right"] = s.enemy_right.value
+        stats["enemy_left"] = s.enemy_left.value
+        stats["line_left"] = s.line_left.value
+        stats["line_right"] = s.line_right.value
+        stats["line_front"] = s.line_front.value
+        return stats
 
-def createFiles():
-    #enemysensor files check
-    if not os.path.exists(enemyLeftPath):
-        with open("/sys/class/gpio/export", "w") as fh:
-            fh.write(str(enemyLeftPin))
-    if not os.path.exists(enemyRightPath):
-        with open("/sys/class/gpio/export", "w") as fh:
-            fh.write(str(enemyRightPin))
-    #linesensor files check
-    if not os.path.exists(lineLeftPath):
-        with open("/sys/class/gpio/export", "w") as fh:
-            fh.write(str(lineLeftPin))
-    if not os.path.exists(lineRightPath):
-        with open("/sys/class/gpio/export", "w") as fh:
-            fh.write(str(lineRightPin))
-    if not os.path.exists(lineFrontPath):
-        with open("/sys/class/gpio/export", "w") as fh:
-            fh.write(str(lineFrontPin))
 
 def isLine(value):
     if value == 'LEFT':
@@ -412,7 +390,7 @@ if __name__ == "__main__":
 
     t=0.1
     print("LED test", end="")
-    for x in range(10):
+    for x in range(5):
         s.blue_led.value = False
         s.red_led.value = True
         s.yellow_led.value = True

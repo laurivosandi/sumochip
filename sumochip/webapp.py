@@ -46,7 +46,7 @@ def command(ws):
             sumorobot.left()
         elif command == 'sensors':
             print("keegi kysib sensoreid")
-            sensors = SensorThread(ws)
+            sensors = SensorThread(ws, sumorobot)
         elif command == 'getSavedCode':
             with open("code.txt", "r") as fh:
                 code = fh.read()
