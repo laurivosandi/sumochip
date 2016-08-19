@@ -1,3 +1,4 @@
+from __future__ import print_function
 from flask import Flask, render_template
 from sumorobot import Sumorobot, SensorThread, isLine, isEnemy
 from flask_sockets import Sockets
@@ -5,9 +6,32 @@ from threading import Thread
 from time import sleep
 import imp
 import json
+import textwrap
+
+codeTemplate = """
+from threading import Thread
+class AutonomousThread(Thread):
+    def __init__(self, sumorobot):
+        Thread.__init__(self)
+        self.sumorobot = sumorobot
+
+    def run(self):
+        self.running = True
+        while self.running:
+            self.step()
+            sleep(0.5)
+        self.sumorobot.stop()
+    def step(self):
+        sumorobot = self.sumorobot
+        isEnemy = lambda x: False
+        print(isEnemy("TEST"))
+"""
+
 
 sumorobot = Sumorobot()
 codeThread = None
+codeText = ""
+codeBytecode = None
 
 app = Flask(__name__)
 try:
@@ -19,12 +43,14 @@ sockets = Sockets(app)
 
 @app.route('/')
 def index():
-    print "HTTP request"
+    print("HTTP request")
     return render_template('index.html')
 
 @sockets.route('/')
 def command(ws):
     global codeThread
+    global codeText
+    global codeBytecode
     while not ws.closed:
         command = ws.receive()
         if command:
@@ -55,10 +81,12 @@ def command(ws):
         elif command == 'executeCode':
             if codeThread:
                 codeThread.running = False
-            slave = imp.load_source('slave','webapp.py')
-            codeThread = slave.AutonomousThread()
+            slave = {}
+            exec codeBytecode in slave
+            codeThread = slave["AutonomousThread"]()
             codeThread.daemon = True
             codeThread.start()
+            print("slave", slave)
         elif command == 'stopCode':
             if codeThread:
                 codeThread.running = False
@@ -68,6 +96,10 @@ def command(ws):
             print(command)
             with open("code.txt", "w") as fh:
                 fh.write(str(command))
+            codeText = str(command)
+            fullCodeText = codeTemplate + "".join((" "*8 + line + "\n" for line in codeText.split("\n")))
+            print(fullCodeText)
+            codeBytecode = compile(codeText, "<string>", "exec")
             print('Saved')
 
 if __name__ == '__main__':
@@ -76,14 +108,3 @@ if __name__ == '__main__':
     from geventwebsocket.handler import WebSocketHandler
     server = pywsgi.WSGIServer(('0.0.0.0', 5001), app, handler_class=WebSocketHandler)
     server.serve_forever()
-
-class AutonomousThread(Thread):
-    def run(self):
-        self.running = True
-        while self.running:
-            self.step()
-            sleep(0.5)
-        sumorobot.stop()
-    def step(self):
-         with open("code.txt", "r") as fh:
-            exec(fh.read())
