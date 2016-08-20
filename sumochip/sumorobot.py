@@ -327,13 +327,13 @@ class Sumorobot(object):
 
     def isEnemy(self, value):
         if value == 'LEFT':
-            return self.enemy_left.value
+            return not self.enemy_left.value
         elif value == 'RIGHT':
-            return self.enemy_right.value
+            return not self.enemy_right.value
         elif value == 'FRONT':
             left = self.enemy_left.value
             right = self.enemy_right.value
-            if right == 1 and left == 1:
+            if right == 0 and left == 0:
                 return True
             else:
                 return False
