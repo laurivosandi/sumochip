@@ -20,7 +20,7 @@ class AutonomousThread(Thread):
         print("Starting AutonomousThread")
         while self.running:
             self.step()
-            sleep(0.5)
+            sleep(0.01)
         print("AutonomousThread was stopped")
         self.sumorobot.stop()
     def step(self):

@@ -119,7 +119,10 @@ class PythonIOPin(object):
     def value(self):
         fhr = self.fhr
         fhr.seek(0)
-        return int(fhr.read())
+        try:
+            return int(fhr.read())
+        except:
+            return 0
 
     @value.setter
     def value(self, val):
