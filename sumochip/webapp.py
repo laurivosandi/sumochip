@@ -25,6 +25,8 @@ class AutonomousThread(Thread):
         self.sumorobot.stop()
     def step(self):
         sumorobot = self.sumorobot
+        isEnemy = sumorobot.isEnemy
+        isLine = sumorobot.isLine
 """
 
 
