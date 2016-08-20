@@ -67,3 +67,4 @@ pcb/export
 pcb/*-panel*
 *.bak
 venv
+sumochip/sumorobot.ini
