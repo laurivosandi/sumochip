@@ -1,15 +1,15 @@
 from __future__ import print_function
 from flask import Flask, render_template
-from sumorobot import Sumorobot, SensorThread, isLine, isEnemy
+from sumorobot import Sumorobot, SensorThread
 from flask_sockets import Sockets
 from threading import Thread
 from time import sleep
 import imp
 import json
-import textwrap
 
 codeTemplate = """
 from threading import Thread
+from time import sleep
 class AutonomousThread(Thread):
     def __init__(self, sumorobot):
         Thread.__init__(self)
@@ -17,14 +17,14 @@ class AutonomousThread(Thread):
 
     def run(self):
         self.running = True
+        print("Starting AutonomousThread")
         while self.running:
             self.step()
             sleep(0.5)
+        print("AutonomousThread was stopped")
         self.sumorobot.stop()
     def step(self):
         sumorobot = self.sumorobot
-        isEnemy = lambda x: False
-        print(isEnemy("TEST"))
 """
 
 
@@ -78,19 +78,24 @@ def command(ws):
                 code = fh.read()
                 print(code)
                 ws.send(json.dumps({'savedCode':code}))
+                codeText = code
+                fullCodeText = codeTemplate + "".join((" "*8 + line + "\n" for line in codeText.split("\n")))
+                print(fullCodeText)
+                codeBytecode = compile(codeText, "<SumorobotCode>", "exec")
         elif command == 'executeCode':
             if codeThread:
                 codeThread.running = False
             slave = {}
-            exec codeBytecode in slave
-            codeThread = slave["AutonomousThread"]()
+            exec(codeBytecode, slave)
+            codeThread = slave["AutonomousThread"](sumorobot)
             codeThread.daemon = True
             codeThread.start()
-            print("slave", slave)
+            sumorobot.sensor_power = True
         elif command == 'stopCode':
             if codeThread:
                 codeThread.running = False
             print("code execution stopped")
+            sumorobot.sensor_power = False
         else:
             print("Code to be saved:")
             print(command)
@@ -99,7 +104,7 @@ def command(ws):
             codeText = str(command)
             fullCodeText = codeTemplate + "".join((" "*8 + line + "\n" for line in codeText.split("\n")))
             print(fullCodeText)
-            codeBytecode = compile(codeText, "<string>", "exec")
+            codeBytecode = compile(fullCodeText, "<SumorobotCode>", "exec")
             print('Saved')
 
 if __name__ == '__main__':

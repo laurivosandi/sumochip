@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import os
 import sys
+from axp209 import AXP209
 from time import sleep
 from threading import Thread
 import json
@@ -19,20 +20,6 @@ try:
     __use_chip_io__ = True
 except ImportError:
     __use_chip_io__ = False
-
-
-motorLeftPin = 202
-motorRightPin = 196
-enemyLeftPin = 192
-enemyRightPin = 195
-lineLeftPin = 193
-lineRightPin = 194
-lineFrontPin = 195
-enemyLeftPath = "/sys/class/gpio/gpio%d" % enemyLeftPin
-enemyRightPath = "/sys/class/gpio/gpio%d" % enemyRightPin
-lineLeftPath = "/sys/class/gpio/gpio%d" % lineLeftPin
-lineRightPath = "/sys/class/gpio/gpio%d" % lineRightPin
-lineFrontPath = "/sys/class/gpio/gpio%d" % lineFrontPin
 
 
 VALID_PINS = {"motor_left",
@@ -199,11 +186,19 @@ class Sumorobot(object):
             config.read(config_file, encoding='utf-8')
 
         force_use_chip_io = False
+        self.axp209 = None
         if "sumorobot" in config.sections():
             sumo_conf = config.options("sumorobot")
             if "use_chip_io" in sumo_conf and config.get("sumorobot", "use_chip_io"):
                 force_use_chip_io = config.getboolean("sumorobot", "use_chip_io")
                 print("override use_chip_io", __use_chip_io__)
+
+            if "axp209" in config.items("sumorobot"):
+                i2c_bus = config.get("sumorobot", "axp209")
+                print("Using axp209 library")
+                self.axp209 = AXP209(i2c_bus)
+            else:
+                self.axp209 = None
 
 
         if "ChipIO" in config.sections() and (__use_chip_io__ or force_use_chip_io):
@@ -283,6 +278,7 @@ class Sumorobot(object):
         for name, pin in self.io.items():
             print("{:<15}: {}".format(name, type(pin).__name__))
 
+
     def __getattr__(self, name):
         if name in self.io:
             return self.io[name]
@@ -313,14 +309,43 @@ class Sumorobot(object):
 
     @property
     def sensor_power(self):
-        return bool(s.io["sensor_power"].value)
+        return bool(self.io["sensor_power"].value)
 
     @sensor_power.setter
     def sensor_power(self, val):
         if val:
-            s.io["sensor_power"].value = 1
+            self.io["sensor_power"].value = 1
         else:
-            s.io["sensor_power"].value = 0
+            self.io["sensor_power"].value = 0
+
+    @property
+    def battery_gauge(self):
+        if self.axp209:
+            return self.axp209.battery_gauge
+        else:
+            return 0
+
+    def isEnemy(self, value):
+        if value == 'LEFT':
+            return self.enemy_left.value
+        elif value == 'RIGHT':
+            return self.enemy_right.value
+        elif value == 'FRONT':
+            left = self.enemy_left.value
+            right = self.enemy_right.value
+            if right == 1 and left == 1:
+                return True
+            else:
+                return False
+
+    def isLine(self, value):
+        if value == 'LEFT':
+            return self.line_left.value
+        elif value == 'RIGHT':
+            return self.line_right.value
+        elif value == 'FRONT':
+            return self.line_front.value
+
 
 
 class SensorThread(Thread):
@@ -342,6 +367,7 @@ class SensorThread(Thread):
         #for filename in os.listdir("/sys/power/axp_pmu/battery/"):
         #    with open ("/sys/power/axp_pmu/battery/" + filename) as fh:
         #        stats[filename] = int(fh.read())
+        stats["capacity"] = self.sumorobot.battery_gauge
 
         stats["enemy_right"] = s.enemy_right.value
         stats["enemy_left"] = s.enemy_left.value
@@ -351,38 +377,7 @@ class SensorThread(Thread):
         return stats
 
 
-def isLine(value):
-    if value == 'LEFT':
-        with open(os.path.join(lineLeftPath, "value")) as fh:
-            return int(fh.read()) == 1
-    elif value == 'RIGHT':
-        with open(os.path.join(lineRightPath, "value")) as fh:
-            return int(fh.read()) == 1
-    elif value == 'FRONT':
-        with open(os.path.join(lineFrontPath, "value")) as fh:
-            return int(fh.read()) == 1
-
-def isEnemy(value):
-    if value == 'LEFT':
-        with open(os.path.join(enemyLeftPath, "value")) as fh:
-            return int(fh.read()) == 1
-    elif value == 'RIGHT':
-        with open(os.path.join(enemyRightPath, "value")) as fh:
-            return int(fh.read()) == 1
-    elif value == 'FRONT':
-        left = 0
-        right = 0
-        with open(os.path.join(enemyLeftPath, "value")) as fh:
-            left = fh.read()
-        with open(os.path.join(enemyRightPath, "value")) as fh:
-            right = fh.read()
-        if right == 1 and left == 1:
-            return True
-        else:
-            return False
-
-if __name__ == "__main__":
-    s = Sumorobot()
+def self_test(s):
     from time import sleep
 
     print("powering on the sensors")
@@ -456,6 +451,13 @@ if __name__ == "__main__":
         s.blue_led.value = not left
         s.green_led.value = not right
 
+        if line_front:
+            s.red_led.value = s.yellow_led.value = not line_front
+        else:
+            s.red_led.value = not line_left
+            s.yellow_led.value = not line_right
+
+
 
         if right and left:
             s.forward()
@@ -476,3 +478,16 @@ if __name__ == "__main__":
         sys.stdout.flush()
 
         sleep(0.01)
+
+
+if __name__ == "__main__":
+    try:
+        s = Sumorobot()
+        self_test(s)
+    except KeyboardInterrupt:
+        print("\nGraceful shutdown (Leds and sensors off)")
+        s.sensor_power = False
+        s.blue_led.value = 1
+        s.red_led.value = 1
+        s.yellow_led.value = 1
+        s.green_led.value = 1
