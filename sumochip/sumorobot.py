@@ -369,8 +369,8 @@ class SensorThread(Thread):
         #        stats[filename] = int(fh.read())
         stats["capacity"] = self.sumorobot.battery_gauge
 
-        stats["enemy_right"] = s.enemy_right.value
-        stats["enemy_left"] = s.enemy_left.value
+        stats["enemy_right"] = 1 if not s.enemy_right.value else 0
+        stats["enemy_left"] = 1 if not s.enemy_left.value else 0
         stats["line_left"] = s.line_left.value
         stats["line_right"] = s.line_right.value
         stats["line_front"] = s.line_front.value
