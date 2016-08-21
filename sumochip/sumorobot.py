@@ -218,7 +218,6 @@ class Sumorobot(object):
         self.io = AttributeDict()
         self.io_proxies = {}
         self.config = config = ConfigParser()
-        print("config_file", config_file)
         if not config_file:
             if os.path.exists("/etc/sumorobot/sumorobot.ini"):
                 config_file = "/etc/sumorobot/sumorobot.ini"
@@ -227,6 +226,7 @@ class Sumorobot(object):
 
         if not config_file:
             raise ConfigFileNotFound("No config files found")
+        print("Using config file '{}'".format(config_file))
 
         if sys.version_info[0] < 3:
             import codecs
