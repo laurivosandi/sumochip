@@ -428,7 +428,7 @@ class SensorThread(Thread):
         #for filename in os.listdir("/sys/power/axp_pmu/battery/"):
         #    with open ("/sys/power/axp_pmu/battery/" + filename) as fh:
         #        stats[filename] = int(fh.read())
-        stats["capacity"] = self.sumorobot.battery_gauge
+        stats["capacity"] = s.battery_gauge
 
         right = not s.enemy_right.value
         left = not s.enemy_left.value

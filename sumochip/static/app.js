@@ -102,7 +102,7 @@ function wsConnect() {
                 document.getElementById('lineSensor').style.borderTop = '20px solid #555';
         }        
         //battery info
-        document.getElementById('charge').style.width = msg.capacity +'%;';
+        document.getElementById('charge').style.width = msg.capacity +'%';
 
     };   
 };
