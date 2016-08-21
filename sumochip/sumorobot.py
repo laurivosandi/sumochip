@@ -212,6 +212,7 @@ class IOProxy(object):
 class ConfigFileNotFound(Exception):
     pass
 
+
 class Sumorobot(object):
 
     def __init__(self, config_file=None):
@@ -342,7 +343,6 @@ class Sumorobot(object):
         for name, pin in self.io.items():
             print("{:<15}: {}".format(name, type(pin).__name__))
 
-
     def __getattr__(self, name):
         if name in self.io_proxies:
             return self.io_proxies[name]
@@ -401,11 +401,11 @@ class Sumorobot(object):
 
     def isLine(self, value):
         if value == 'LEFT':
-            return self.line_left.value
+            return not self.line_left.value
         elif value == 'RIGHT':
-            return self.line_right.value
+            return not self.line_right.value
         elif value == 'FRONT':
-            return self.line_front.value
+            return not self.line_front.value
 
 
 
@@ -432,9 +432,9 @@ class SensorThread(Thread):
 
         stats["enemy_right"] = 1 if not s.enemy_right.value else 0
         stats["enemy_left"] = 1 if not s.enemy_left.value else 0
-        stats["line_left"] = s.line_left.value
-        stats["line_right"] = s.line_right.value
-        stats["line_front"] = s.line_front.value
+        stats["line_left"] = 1 if not s.line_left.value else 0
+        stats["line_right"] = 1 if not s.line_right.value else 0
+        stats["line_front"] = 1 if not s.line_front.value else 0
         return stats
 
 
