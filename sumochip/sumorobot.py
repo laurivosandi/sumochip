@@ -446,10 +446,10 @@ class SensorThread(Thread):
             s.yellow_led.value = not line_right
 
         stats["enemy_right"] = 1 if right else 0
-        stats["enemy_left"] = 1 if not left else 0
-        stats["line_left"] = 1 if not line_left else 0
-        stats["line_right"] = 1 if not line_right else 0
-        stats["line_front"] = 1 if not line_front else 0
+        stats["enemy_left"] = 1 if left else 0
+        stats["line_left"] = 1 if line_left else 0
+        stats["line_right"] = 1 if line_right else 0
+        stats["line_front"] = 1 if line_front else 0
         return stats
 
 
