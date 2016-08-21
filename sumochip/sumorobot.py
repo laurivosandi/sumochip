@@ -244,7 +244,7 @@ class Sumorobot(object):
                 print("override use_chip_io", __use_chip_io__)
 
             if "axp209" in sumo_conf:
-                i2c_bus = config.get("sumorobot", "axp209")
+                i2c_bus = config.getint("sumorobot", "axp209")
                 print("Using axp209 library")
                 self.axp209 = AXP209(i2c_bus)
             else:
