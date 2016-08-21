@@ -9,9 +9,9 @@ import json
 
 if sys.version_info[0] < 3:
     from ConfigParser import SafeConfigParser as ConfigParser
-    from ConfigParser import NoOptionError
+    from ConfigParser import NoOptionError, NoSectionError
 else:
-    from configparser import ConfigParser, NoOptionError
+    from configparser import ConfigParser, NoOptionError, NoSectionError
 
 
 try:
@@ -141,7 +141,6 @@ class NoIOPin(object):
     value = 0
 
 
-
 class PythonIOMotor(Thread): # This class generated PWM signal necessary for servo motors
     def __init__(self, pin=192):
         Thread.__init__(self)
@@ -168,18 +167,66 @@ class PythonIOMotor(Thread): # This class generated PWM signal necessary for ser
             else:
                 sleep(0.020)
 
+class IOPollThread(Thread):
+    """Polls the IO pins"""
+
+    def __init__(self, io_pins, poll_freq):
+        Thread.__init__(self)
+        self.io_pins = io_pins
+        self._stopped_ = False
+        self._values_ = {}
+        self.poll_freq = poll_freq
+        self.daemon = True
+        self.update_io_values()
+        self.start()
+
+    def run(self):
+        while not self._stopped_:
+            self.update_io_values()
+            sleep(self.poll_freq)
+
+    def update_io_values(self):
+        for name, pin in self.io_pins.items():
+            self._values_[name] = pin.value
+
+    def __getitem__(self, name):
+        return self._values_[name]
+
+
+class IOProxy(object):
+    """Proxies IO access to pins through IOPollThread"""
+
+    def __init__(self, io_pin, io_name, io_poll_thread):
+        self.io_pin = io_pin
+        self.io_name = io_name
+        self.io_poll_thread = io_poll_thread
+
+    @property
+    def value(self):
+        return self.io_poll_thread[self.io_name]
+
+    @value.setter
+    def value(self, value):
+        self.io_pin.value = value
+
+class ConfigFileNotFound(Exception):
+    pass
 
 class Sumorobot(object):
 
     def __init__(self, config_file=None):
         self.io = AttributeDict()
+        self.io_proxies = {}
         self.config = config = ConfigParser()
-
+        print("config_file", config_file)
         if not config_file:
             if os.path.exists("/etc/sumorobot/sumorobot.ini"):
                 config_file = "/etc/sumorobot/sumorobot.ini"
             if os.path.exists("sumorobot.ini"):
                 config_file = "sumorobot.ini"
+
+        if not config_file:
+            raise ConfigFileNotFound("No config files found")
 
         if sys.version_info[0] < 3:
             import codecs
@@ -196,7 +243,7 @@ class Sumorobot(object):
                 force_use_chip_io = config.getboolean("sumorobot", "use_chip_io")
                 print("override use_chip_io", __use_chip_io__)
 
-            if "axp209" in config.items("sumorobot"):
+            if "axp209" in sumo_conf:
                 i2c_bus = config.get("sumorobot", "axp209")
                 print("Using axp209 library")
                 self.axp209 = AXP209(i2c_bus)
@@ -273,6 +320,20 @@ class Sumorobot(object):
         if unconfigured_pins:
             for pin_name in unconfigured_pins:
                 self.io[pin_name] = NoIOPin()
+
+        io_poll_freq = 0.01
+        try:
+            io_poll_freq = self.config.getint("sumorobot", "io_poll_freq")
+        except (NoSectionError, NoOptionError):
+            pass
+        self.io_poll_thread = IOPollThread(self.io, io_poll_freq)
+
+        for name, pin in self.io.items():
+            if isinstance(pin, NoIOPin):
+                continue
+            self.io_proxies[pin_name] = IOProxy(pin, name, self.io_poll_thread)
+
+
         print("NoIO pins: ", ", ".join(str(pin) for pin in unconfigured_pins))
 
         from pprint import pprint
@@ -283,13 +344,14 @@ class Sumorobot(object):
 
 
     def __getattr__(self, name):
-        if name in self.io:
+        if name in self.io_proxies:
+            return self.io_proxies[name]
+        elif name in self.io:
             return self.io[name]
         else:
             raise AttributeError("'{}' object has no I/O pin named '{}'".format(type(self).__name__, name))
 
 
-        self.isAutonomous = False
     def forward(self):
         self.motor_left.speed = 1
         self.motor_right.speed = -1
@@ -305,10 +367,6 @@ class Sumorobot(object):
     def left(self):
         self.motor_left.speed = -1
         self.motor_right.speed = -1
-
-    def leds_on(self):
-        for led in (pin for pin in self.io if pin.endswith("led")):
-            self.io[led].value = 0
 
     @property
     def sensor_power(self):
