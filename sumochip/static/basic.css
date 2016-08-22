@@ -104,6 +104,7 @@ h1 {
   font-size: 16px;
   padding: 5px 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {
