@@ -1,4 +1,21 @@
-sumorobot.right()
-sleep(1)
-sumorobot.left()
-sleep(1)
+if isEnemy("FRONT"):
+  sumorobot.forward()
+elif isEnemy("RIGHT"):
+  sumorobot.right()
+elif isEnemy("LEFT"):
+  sumorobot.left()
+elif isLine("FRONT"):
+  sumorobot.back()
+  sleep(2)
+elif isLine("LEFT"):
+  sumorobot.back()
+  sleep(1)
+  sumorobot.left()
+  sleep(0.5)
+elif isLine("RIGHT"):
+  sumorobot.back()
+  sleep(1)
+  sumorobot.right()
+  sleep(0.5)
+else:
+  sumorobot.forward()

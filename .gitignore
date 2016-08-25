@@ -61,11 +61,14 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
+venv
+sumochip/sumorobot.ini
+*.bak
+
 # Kicad
 *.kicad_pcb-bak
 pcb/export
 pcb/*-panel*
-*.bak
 pcb/*.png
 pcb/*.net
 pcb/*.dsn
