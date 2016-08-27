@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name = "sumochip",
-    version = "1.1",
+    version = "1.1.1",
     author = u"Lauri Võsandi",
     author_email = "lauri.vosandi@gmail.com",
     description = "SumoCHIP is an extremely low-budget robotics platform based on CHIP single-board computer",
@@ -33,4 +33,7 @@ setup(
         'Programming Language :: Python :: 2',
         "Programming Language :: Python :: 2.7",
     ],
+    data_files=[
+        ("lib/systemd/system", ["sumochip.service"])
+    ]
 )

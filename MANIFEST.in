@@ -1,3 +1,2 @@
-recursive-include sumochip/config *
-recursive-include sumochip/templates *
-recursive-include sumochip/static *
+include sumochip.service
+graft sumochip
