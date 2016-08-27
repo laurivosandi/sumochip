@@ -9,22 +9,45 @@
 ```
 apt update
 apt full-upgrade
-apt install git python-pip python-dev
-pip install Flask Flask-Sockets CHIP-IO axp209
-git clone https://github.com/artizirk/sumochip
+apt install git python-pip python-dev python-systemd
+```
+
+Install stable release
+
+```
+pip install sumochip
+```
+
+or install git version
+
+```
+pip install git+https://github.com/laurivosandi/sumochip
 ```
 
 5. Configure sumorobot software
 
 ```
-cd ~/sumochip/sumochip
-rm sumorobot.ini
-ln -s config/sumochip_v1.1.ini sumorobot.ini
+mkdir -p /etc/sumorobot
+cp `python -c "import os, sumochip; print(os.path.dirname(os.path.realpath(sumochip.__file__)))"`/config/sumochip_v1.1.ini /etc/sumorobot/sumorobot.ini
 ```
 
 6. Run self test
 
 ```
-cd ~/sumochip/sumochip
-python sumorobot.py
+sumochip_test
+```
+
+7. Start the web interface
+
+From terminal
+
+```
+sumochip_web
+```
+
+Or start and optionaly enable autostart of systemd service
+
+```
+systemctl start sumochip
+systemctl enable sumochip
 ```
