@@ -6,6 +6,7 @@ from threading import Thread
 from time import sleep
 import imp
 import json
+import os
 
 codeTemplate = """
 from threading import Thread
@@ -109,9 +110,16 @@ def command(ws):
             codeBytecode = compile(fullCodeText, "<SumorobotCode>", "exec")
             print('Saved')
 
-if __name__ == '__main__':
-    print("Started server")
+
+def main():
     from gevent import pywsgi
     from geventwebsocket.handler import WebSocketHandler
-    server = pywsgi.WSGIServer(('0.0.0.0', 5001), app, handler_class=WebSocketHandler)
+    ip, port = ('0.0.0.0', 5001)
+    if os.getuid() == 0:
+        port = 80
+    server = pywsgi.WSGIServer((ip, port), app, handler_class=WebSocketHandler)
+    print("Starting server at http://{}:{}".format(ip, port))
     server.serve_forever()
+
+if __name__ == '__main__':
+    main()

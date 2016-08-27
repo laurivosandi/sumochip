@@ -498,7 +498,7 @@ def self_test(s):
 
 
     print("motor_left test")
-    for x in range(-100, 100, 1):
+    for x in range(-100, 100, 2):
         s.motor_left.speed = x/100.0
         print(x, end="   \r")
         sys.stdout.flush()
@@ -507,7 +507,7 @@ def self_test(s):
     s.motor_left.speed = 0
 
     print("motor_right test")
-    for x in range(-100, 100, 1):
+    for x in range(-100, 100, 2):
         s.motor_right.speed = x/100.0
         print(x, end="   \r")
         sys.stdout.flush()
@@ -515,6 +515,16 @@ def self_test(s):
     print()
     s.motor_left.speed = 0
 
+
+    print("sumorobot.forward()")
+    s.forward()
+    sleep(1)
+    s.stop()
+
+    print("sumorobot.back()")
+    s.back()
+    sleep(1)
+    s.stop()
 
     print("Entering play mode")
     while True:
@@ -555,8 +565,7 @@ def self_test(s):
 
         sleep(0.01)
 
-
-if __name__ == "__main__":
+def main():
     try:
         s = Sumorobot()
         self_test(s)
@@ -567,3 +576,6 @@ if __name__ == "__main__":
         s.red_led.value = 1
         s.yellow_led.value = 1
         s.green_led.value = 1
+
+if __name__ == "__main__":
+    main()

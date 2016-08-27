@@ -1,0 +1,28 @@
+[Unit]
+Description=SumoCHIP web interface
+Documentation=https://github.com/laurivosandi/sumochip
+# Don't run without a config file
+AssertPathExists=/etc/sumorobot/sumorobot.ini
+
+[Service]
+# Note: setting PYTHONUNBUFFERED is necessary to see the output of this service in the journal
+# See https://docs.python.org/2/using/cmdline.html#envvar-PYTHONUNBUFFERED
+Environment=PYTHONUNBUFFERED=true
+
+# By default python scripts are installed under /usr/local/bin
+ExecStart=/usr/local/bin/sumochip_web
+
+# Make it as realtime as possible
+#Nice=-20
+#IOSchedulingClass=realtime
+#IOSchedulingPriority=0
+#CPUSchedulingPolicy=rr
+#CPUSchedulingPriority=99
+
+# In anycase try to restart the service
+Restart=on-failure
+# Sleep 3s before restart
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
