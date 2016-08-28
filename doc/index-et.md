@@ -53,7 +53,7 @@ Kicadi projekti leiab Git lähtekoodivaramust, sellest saab eksportida LinuxCNC 
 
 Komponentide jootmisel on abiks järgnev joonis:
 
-![PCB layout](https://rawgithub.com/laurivosandi/sumochip/master/pcb/sumochip-brd.svg)
+![PCB layout](https://rawgit.com/laurivosandi/sumochip/8c88d02933c06c37d371292771ff80047eec376a/pcb/sumochip-brd.svg)
 
 Jootmise järjekord:
 
@@ -190,7 +190,7 @@ Servomootorite juhtmete pakkimiseks kasuta pildil näidatud varianti:
 
 ![Wrapping servo wires](img/kit/50-wrapping-servo-wires.jpg)
 
-Veendudes, et akut liiga tugevalt kokku ei surutaks fikseeri aju kere suhtes poltide abil:
+Veendudes, et akut liiga tugevalt kokku ei surutaks fikseeri aju kere suhtes mutrite abil:
 
 ![Brain fixed](img/kit/52-brain-fixed.jpg)
 
@@ -264,10 +264,10 @@ Paigalda sõltuvused ning Git versioonihaldustarkvara:
 apt install python-pip python-dev git
 ```
 
-Seejärel võime paigaldada sumoroboti tarkvara Git lähtekoodi varamust:
+Seejärel võime paigaldada sumoroboti tarkvara:
 
 ```bash
-pip install git+https://github.com/laurivosandi/sumochip
+pip install sumochip
 ```
 
 Kui kõik on seni sujuvalt kulgenud võib välja uurida mis IP aadressil CHIP asub. Selleks saab kasutada käsku:
@@ -341,7 +341,7 @@ nano tee/failini.py
 ```
 Kasuta klahvikombinatsiooni Ctrl-K et teksti paigutada lõikepuhvrisse ning Ctrl-U et neid uude valitud kohta kleepida. Ctrl-X abil saab salvestada faili ning programmist väljuda.
 
-Pisut mugavam tekstiredaktor on Midnight Comamnder koosseisus, selle paigaldamiseks:
+Pisut mugavam tekstiredaktor on Midnight Commander koosseisus, selle paigaldamiseks:
 
 ```Bash
 apt install mc
