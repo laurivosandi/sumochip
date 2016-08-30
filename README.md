@@ -12,7 +12,7 @@ would be easy to etch at home or school.
 
 Documentation will be available in various languages:
 
-* [Estonian](doc/et/)
+* [Estonian](doc/index-et.md)
 
 
 ##Kits
