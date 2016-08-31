@@ -286,7 +286,56 @@ Kuna CHIP-il pole videoväljundeid on kuvari ühendamine problemaatiline. Eelist
 
 ![Serial](img/kit/62-connecting-via-usb.jpg)
 
+###Ohjurtarkvara paigaldus
+
+Ubuntu ning Mac OS X all ohjurtarkvara paigaldada pole vaja, Windowsi puhul on asi mõnevõrra keerukam. Ava *Device Manager*:
+
+![Device manager](img/usbser/01.png)
+
+Leia nimistust kollase kolmnurgaga *CDC Composite Gadget* ning tee parem klõps sellel ning vali menüüst *Update Driver Software...*:
+
+![Device manager](img/usbser/02.png)
+
+Järgnevalt vali *Browse my computer for driver software*:
+
+![Device manager](img/usbser/03.png)
+
+Seejärel vali *Let me pick from a list of device drivers on my computer*:
+
+![Device manager](img/usbser/04.png)
+
+Jäta valituks *Show All Devices* ning klõpsa *Next* nupul:
+
+![Device manager](img/usbser/05.png)
+
+Keri vasakpoolses nimekirjas allapoole ning vali *Microsoft* seejärel keri parempoolses nimekirjas alla ning vali *USB Serial Device*:
+
+![Device manager](img/usbser/06.png)
+
+Hoiatusaknas klõpsa *Yes* nupul:
+
+![Device manager](img/usbser/07.png)
+
+Ohjurtarkvara peaks olema seejärel edukalt paigaldatud:
+
+![Device manager](img/usbser/08.png)
+
+Seadmete nimekirja peaks tekkima uus *USB Serial Device* seade. Jäta selle jadaliidese number meelde, järgneval kuvatõmmisel on ta nimeks COM6:
+
+![Device manager](img/usbser/09.png)
+
+
+###Jadaliidese avamine
+
 Jadaliidese kasutamiseks võivad Windowsi kasutajad pruukida [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nimelist programmi. Ubuntu ning teiste UNIX-ilaadsete operatsioonisüsteemide all võib kasutada `screen`, `picocom` vms programme. Jadaliides võimaldab ligipääsu CHIP-i sees käiva tarkvara käsureale nii nagu paljude teiste nutiseadmete puhul. CHIP kasutab operatsioonisüsteemina Debiani ning paljud Ubuntust tuttavad käsud toimivad seal täpselt samamoodi.
+
+
+###Robotisse sisse logimine
+
+Kasutajanimi on *root* ning parool on *chip*.
+
+
+###Võrgu seadistamine
 
 Esmalt ühenda CHIP WiFi kaudu Internetti, selleks saad kasutada NetworkManageri pseudograafilist kasutajaliidest:
 
@@ -306,6 +355,9 @@ Kuna CHIP-il pole akut ega kella mis aja üle arvestust peaks püüab CHIP peale
 date
 ```
 
+
+###Operatsioonisüsteemi uuendamine
+
 Kui võrguühendus on olemas võime teha CHIP-i operatsioonisüsteemile tarkvarauuenduse:
 
 ```bash
@@ -313,11 +365,16 @@ apt update       # Uuenda pakettide nimekirju
 apt full-upgrade   # Uuenda pakette
 ```
 
+
+### Sõltuvuste paigaldamine
+
 Paigalda sõltuvused ning Git versioonihaldustarkvara:
 
 ```bash
 apt install python-pip python-dev git
 ```
+
+###Sumoroboti tarkvara paigaldus
 
 Seejärel võime paigaldada sumoroboti tarkvara:
 
@@ -336,6 +393,8 @@ Proovi algatada SSH ühendus robotisse, Windowsis saab selleks kasutada PuTTY-t 
 ```bash
 ssh <ip-aadress>
 ```
+
+###Sumoroboti tarkvara seadistamine
 
 Paigalda konfiguratsioonifail mis ütleb mis jalgade külge servomootorid ja sensorid ühendatud on:
 
