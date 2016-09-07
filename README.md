@@ -12,7 +12,7 @@ would be easy to etch at home or school.
 
 Documentation will be available in various languages:
 
-* [Estonian](doc/ndex-et/index-et.md)
+* [Estonian](doc/index-et/index-et.md)
 * [English](doc/index-en/index-en.md)
 
 
