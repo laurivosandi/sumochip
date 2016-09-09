@@ -27,6 +27,10 @@ Following people have contributed to the SumoCHIP project in one way or another:
   * Hardware research
   * Sunxi helpdesk
 
+* Matteo Ottavio
+
+  * SumoCHIP daughterboard PCB layout and testing
+
 * **João Rodrigues**
 
   * Blender 3D model
