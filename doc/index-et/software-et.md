@@ -66,8 +66,30 @@ Seadmete nimekirja peaks tekkima uus *USB Serial Device* seade. Jäta selle jada
 
 ###Jadaliidese avamine
 
-Jadaliidese kasutamiseks võivad Windowsi kasutajad pruukida [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nimelist programmi. Ubuntu ning teiste UNIX-ilaadsete operatsioonisüsteemide all võib kasutada `screen`, `picocom` vms programme. Jadaliides võimaldab ligipääsu CHIP-i sees käiva tarkvara käsureale nii nagu paljude teiste nutiseadmete puhul. CHIP kasutab operatsioonisüsteemina Debiani ning paljud Ubuntust tuttavad käsud toimivad seal täpselt samamoodi.
+Jadaliidese kasutamiseks võivad Windowsi kasutajad pruukida [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nimelist programmi. 
+Ubuntu ning teiste UNIX-ilaadsete operatsioonisüsteemide all võib kasutada `screen`, `picocom` vms programme. 
+Jadaliides võimaldab ligipääsu CHIP-i sees käiva tarkvara käsureale nii nagu paljude teiste nutiseadmete puhul. 
+CHIP kasutab operatsioonisüsteemina Debiani ning paljud Ubuntust tuttavad käsud toimivad seal täpselt samamoodi.
 
+
+###Jadaliidese avamine Ubuntu keskkonnas
+
+Ühenduse loomiseks sobib käsk 
+```bash
+picocom -b 115200 /dev/ttyACM0
+```
+Kui see ei õnnestu võib vaadata kas kasutusel on mõni muu port?
+```bash
+dmesg | grep tty
+```
+
+###Jadaliidese avamine Windows keskkonnas
+
+Käivitada PuTTY
+Valida *Connection type*:
+*Serial*
+*Serial line* sama jadaliidese number mis eelnevalt meelde sai jäetud.
+*Speed* 115200
 
 ###Robotisse sisse logimine
 
@@ -163,6 +185,24 @@ Proovi käivitada ka veebiliides:
 
 ```bash
 sumochip_web
+```
+
+Kui soov on jooksutada robotit aku pealt siis tuleb jooksutada käsku:
+
+
+```bash
+systemctl start sumochip
+```
+
+Selleks, et aktiveerida sumochip kasuta käsku:
+```bash
+systemctl enable sumochip -- pikaajaline ON seisund
+```
+
+
+Selleks et kontrollida kas aku on roboti peal asuvast lülitist kasutada käsku:
+```bash
+axp209
 ```
 
 

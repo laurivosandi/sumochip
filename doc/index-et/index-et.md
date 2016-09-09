@@ -10,6 +10,6 @@ Lisaks on vaja akutrelli, 3mm metallpuuri, plekikääre, kruvikeerajat, näpitsa
 
 [TOC]
 
-1. [Komponendid](komponendid.md "Komponendid")
-2. [Kokkupanemine](kokkupanemine.md "Kokkupanemine")
-3. [Tarkvara ja seadistamine](tarkvara.md "Tarkvara ja sedistamine")
+1. [Komponendid](components-et.md "Komponendid")
+2. [Kokkupanemine](assembly-et.md "Kokkupanemine")
+3. [Tarkvara ja seadistamine](software-et.md "Tarkvara ja sedistamine")

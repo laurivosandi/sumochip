@@ -51,7 +51,7 @@ Drivers should now be installed:
 
 ![Device manager](../img/usbser/08.png)
 
-A new *USB Serial Device* should appear to device list. Remember the serial number as it will be needed later. On this particular screenshot it is COM6:
+A new *USB Serial Device* should appear to device list. Remember or note the serial number as it will be needed later. On this particular screenshot it is COM6:
 
 ![Device manager](../img/usbser/09.png)
 
@@ -62,13 +62,28 @@ For connecting to your robot via serial connection Windows users can use [PuTTY]
 Ubuntu and other UNIX operating systems can use programs like `screen`, `picocom` or your own preference.
 Serial connection allows access to command line inside CHIP and many other smart devices. CHIP uses Debian as its operating system and many commands are the same as Ubuntu.
 
+###Opening serial connection in Ubuntu
+
+With picocom use the command:
+Ctrl-A, Ctrl-X to exit picocom
+```bash
+picocom -b 115200 /dev/ttyACM0
+```
+If that fails try and find the correct serial port
+```bash
+dmesg | grep tty
+```
+
+###Opening serial connection in Windows
+
+Run PuTTY:
+Choose *Connection type*:
+*Serial*:
+*Serial line* same serial number as previously noted.
+*Speed* 115200
+
 
 ###Logging into the robot
-
-```bash
-sudo picocom -b 115200 /dev/ttyACM0
-```
-Ctrl-A, Ctrl-X
 
 Username is *root* and password *chip*.
 
@@ -157,10 +172,26 @@ Perform the same check on the sensors for detecting enemies:
 
 
 
-Try to run the web application:
+To test the web application:
 
 ```bash
 sumochip_web
+```
+
+If you wish to run the robot off battery power use the command:
+
+```bash
+systemctl start sumochip
+```
+
+To enable the sumochip use the command:
+```bash
+systemctl enable sumochip -- pikaajaline ON seisund
+```
+
+To make sure the battery is turned on and connected to the CHIP run:
+```bash
+axp209
 ```
 
 If you need to shut down the robot then use the command:
