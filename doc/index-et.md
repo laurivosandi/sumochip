@@ -8,7 +8,7 @@ Sumoroboti komplekti kuuluvad: SumoCHIP tütarplaat, CHIP emaplaat, liitiumpolü
 
 Lisaks on vaja akutrelli, 3mm metallpuuri, plekikääre, kruvikeerajat, näpitsaid. Trükkplaadi jootmiseks on vaja ka jootekolbi, tina ning kampoli.
 
-[TOC]
+<img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/esf-est.svg"/><a href="http://hitsa.ee/en"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/hitsa-est.svg"/></a><a href="http://www.progetiiger.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/progetiiger.svg"/></a>
 
 ## Komponendid
 
