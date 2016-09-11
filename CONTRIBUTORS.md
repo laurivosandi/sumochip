@@ -44,6 +44,10 @@ Following people have contributed to the SumoCHIP project in one way or another:
 
   * Flask based web interface development
 
+* **[Karell Veskimeister](https://github.com/kveskime/)**
+
+  * English translation of the documentation
+
 * **[Lauri Võsandi](https://github.com/laurivosandi)**
 
   * Project management
