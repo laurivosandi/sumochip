@@ -8,6 +8,8 @@ would be easy to etch at home or school.
 
 ![Sumo](doc/img/sumo.png)
 
+<img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/esf-eng.svg"/><a href="http://hitsa.ee/en"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/hitsa-eng.svg"/></a><a href="http://www.progetiiger.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/progetiiger.svg"/></a>
+
 ##Documentation
 
 Documentation will be available in various languages:
