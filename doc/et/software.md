@@ -247,4 +247,6 @@ mcedit tee/failini.py
 ```
 Menüüdes navigeerimine käib analoogselt graafiliste rakendustega, Alt-F avab peamenüü. Kiirklahvidest kõige olulisemad on F5 kopeerimiseks, F6 lõikamiseks ning F10 programmist väljumiseks.
 
+![mcedit](../img/mcedit.png)
+
 [Avalehele](index-et.md "Avalehele")

@@ -236,4 +236,6 @@ mcedit path/filename.py
 
 Navigating the menus is similar to graphical applications, Alt-F opens the main menu. Most important shortcuts are F5 to copy, F6 to cut and F10 to exit the program.
 
+![mcedit](../img/mcedit.png)
+
 [Back to main page](index-en.md "Main page")
