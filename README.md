@@ -52,11 +52,14 @@ to achieve better timing granularity for servo motors.
 
 Improvements and translations are very much welcome.
 The contents of this Git repository are published under very liberal [MIT license](LICENSE).
-Just register an account here at GitHub and hit the [Fork](#fork-destination-box) button in the top right corner,
+Just register an account here at GitHub and hit the Fork button in the top right corner,
 this shall make a copy of the source code repository under your GitHub account.
 Make the necessary modifications in your repository and once ready
-make a [https://help.github.com/articles/about-pull-requests/ pull request]
+make a [pull request](https://help.github.com/articles/about-pull-requests/)
 to get your changes merged. All contributors shall be mentioned in [the contributors list](CONTRIBUTORS.md).
+We don't expect you to sign a contributor license agreement,
+but you should not forget that as this project is distributed under MIT license,
+third parties or even us are free to make commercial use of any of the repository's contents.
 
 ##About
 
