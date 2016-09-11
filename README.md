@@ -48,6 +48,16 @@ The current implementation is based on Python and Flask.
 In future we might add kernel module for generating fine grained PWM signals
 to achieve better timing granularity for servo motors.
 
+##Contributing
+
+Improvements and translations are very much welcome.
+The contents of this Git repository are published under very liberal [MIT license](LICENSE).
+Just register an account here at GitHub and hit the [Fork](#fork-destination-box) button in the top right corner,
+this shall make a copy of the source code repository under your GitHub account.
+Make the necessary modifications in your repository and once ready
+make a [https://help.github.com/articles/about-pull-requests/ pull request]
+to get your changes merged. All contributors shall be mentioned in [the contributors list](CONTRIBUTORS.md).
+
 ##About
 
 <a href="http://robot.itcollege.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/robo-eng.svg"/></a>
