@@ -12,11 +12,9 @@ would be easy to etch at home or school.
 
 ##Documentation
 
-Documentation will be available in various languages:
-
-* [Estonian](/doc/et/index.md)
-* [English](/doc/en/index.md)
-
+Documentation is available [here](doc/index.md).
+Translations are very much welcome.
+See below how you can contribute!
 
 
 ##Kits
