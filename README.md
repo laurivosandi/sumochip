@@ -14,8 +14,8 @@ would be easy to etch at home or school.
 
 Documentation will be available in various languages:
 
-* [Estonian](doc/et/index.md)
-* [English](doc/en/index.md)
+* [Estonian](sumochip/doc/et/index.md)
+* [English](sumochip/doc/en/index.md)
 
 
 
