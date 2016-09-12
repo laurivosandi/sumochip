@@ -1,22 +1,22 @@
 
 ##Software
 
-The underlying software for the sumo robot is written in Python using web framework Flask.
- The underlying source code can be attained from GitHub at https://github.com/laurivosandi/sumochip and corrections and additions are welcome.
+The underlying software for the sumorobot is written in Python using web framework Flask.
+The underlying source code can be attained from GitHub at https://github.com/laurivosandi/sumochip and corrections and additions are welcome.
 
 
 ###Software installation
 
-Sumo robot is programmable through the web, but in order to do that we will need to install a web application on the robot. The following steps will guide you through this. This is only necessary on the first time.
-
-Kuna CHIP-il pole videoväljundeid on kuvari ühendamine problemaatiline. Eelistatud on hoopiski üle USB kaabli jadaliidese kasutamine selleks, et robotile teha esmane seadistus. Windows puhul on vaja paigaldada ohjurtarkvara,
- et üldse USB kaablit kasutada saaks. Mac OS X ning Linux puhul seda teha vaja pole.
-Since CHIP has no video output connecting a screen is problematic.
-Preferred usage would be serial connection via USB cable, to set up the device. For windows additional driver installation is needed to be able to use the USB cable.
+Sumorobot is programmable through the web, but in order to do that we will need to install a web application on the robot. 
+Since CHIP does not have video outputs, connecting an HDMI screen is problematic.
+Instead we use USB cable to attach to the serial port on the robot.
+The following steps will guide you through this.
+This is necessary to be done only once, afterwards you can use the network.
+For Windows additional driver installation is needed to be able to use the USB cable.
 Mac OS X or Linux do not have these problems.
 
 ![Serial](../img/kit/62-connecting-via-usb.jpg)
-Ohjurtarkvara minema siit.
+
 ###Installing drivers
 
 For Ubuntu and Mac OS X driver installation is not needed, for Windows driver installation is necessary. Open Device Manager:
@@ -66,10 +66,13 @@ Serial connection allows access to command line inside CHIP and many other smart
 
 With picocom use the command:
 Ctrl-A, Ctrl-X to exit picocom
+
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
-If that fails try and find the correct serial port
+
+If that fails try to find the correct serial port name with following command:
+
 ```bash
 dmesg | grep tty
 ```
@@ -100,13 +103,17 @@ To verify Internet connection use the `ping` command. Press Ctrl-C to abort:
 ping neti.ee
 ```
 
-
-Due do CHIP not having a battery or clock that keeps track of time, then CHIP will try to request the time from the Internet, but sometimes this may fail.
+Due do CHIP not having a real time clock that keeps track of time,
+the CHIP will try to request the time from the Internet, but sometimes this may fail.
 To verify the clock is correct you can use the following command, safe connections to Internet(e.g. GitHub) will fail if the clock is wrong.
 
 ```bash
 date
 ```
+
+To change the network name of the robot change the hostname in /etc/hostname and /etc/hosts:
+
+  echo robot_name > /etc/hostname
 
 
 ###Updating the operating system
@@ -127,27 +134,21 @@ Install Git version control software:
 apt install python-pip python-dev git
 ```
 
-###Installing the sumo robot software
+###Installing the sumorobot software
 
-After those steps we are ready to install the sumo robot software:
+After those steps we are ready to install the sumorobot software:
 
 ```bash
 pip install sumochip
 ```
 
-If all has gone according to plan so far then we can find out what is the CHIP's IP address. For this we can use the command :
+If all has gone according to plan so far then we can find out what is the CHIP's IP address. For this we can use the command:
 
 ```bash
 ifconfig
 ```
 
-Try connecting to the robot using SSH, in Windows use PuTTY and under UNIX the command:
-
-```bash
-ssh <username>@<ip-aadress>
-```
-
-###Setting up the software for sumo robot
+###Setting up the software for sumorobot
 
 Get the configuration file, that has the information about which legs the servomotors and sensors are connected to:
 
@@ -155,7 +156,6 @@ Get the configuration file, that has the information about which legs the servom
 mkdir -p /etc/sumorobot/
 curl https://raw.githubusercontent.com/artizirk/sumochip/master/sumochip/config/sumochip_v1.1.ini > /etc/sumorobot/sumorobot.ini
 ```
-
 
 Run test program, to abort press Ctrl-C:
 
@@ -169,8 +169,6 @@ Check that the line sensors LEDs work. For this look into the line sensors with 
 Perform the same check on the sensors for detecting enemies:
 
 ![Checking enemy sensors](../img/kit/64-checking-enemy-sensors.jpg)
-
-
 
 To test the web application:
 
@@ -186,10 +184,11 @@ systemctl start sumochip
 
 To enable the sumochip use the command:
 ```bash
-systemctl enable sumochip -- pikaajaline ON seisund
+systemctl enable sumochip
 ```
 
-To make sure the battery is turned on and connected to the CHIP run:
+To make sure the battery is connected to the CHIP run:
+
 ```bash
 axp209
 ```
@@ -205,7 +204,7 @@ shutdown -h now
 
 ###Most frequently used commands
 
-Commands used on CHIP also work the same on RaspberryPi and Ubuntu:
+Commands used on CHIP also work the same on Raspberry Pi and Ubuntu:
 
 * Current directory: `pwd`
 * Displaying files and directories in the current directory: `ls -lah`
@@ -238,4 +237,5 @@ Navigating the menus is similar to graphical applications, Alt-F opens the main 
 
 ![mcedit](../img/mcedit.png)
 
-[Back to main page](index-en.md "Main page")
+
+[Back to main page](index.md "Main page")
