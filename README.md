@@ -45,7 +45,8 @@ standard mail services once a week.
 ##Software
 
 The current implementation is based on Python and Flask.
-In future we might add kernel module for generating fine grained PWM signals
+In future we might add
+[kernel module for generating fine grained PWM signals](https://github.com/tanzilli/soft_pwm)
 to achieve better timing granularity for servo motors.
 
 ##Contributing
