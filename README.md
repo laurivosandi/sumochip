@@ -10,6 +10,12 @@ would be easy to etch at home or school.
 
 <img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/esf-eng.svg"/><a href="http://hitsa.ee/en"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/hitsa-eng.svg"/></a><a href="http://www.progetiiger.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/progetiiger.svg"/></a>
 
+##Demo
+
+<a href="https://youtu.be/Hw_wJBUtGzg" target="_blank"><img src="http://img.youtube.com/vi/Hw_wJBUtGzg/0.jpg"/></a>
+
+*Sumorobots battling*
+
 ##Documentation
 
 Documentation is available [here](doc/index.md).
