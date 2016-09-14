@@ -72,6 +72,21 @@ We don't expect you to sign a contributor license agreement,
 but you should not forget that as this project is distributed under MIT license,
 third parties or even us are free to make commercial use of any of the repository's contents.
 
+##Known issues
+
+We have discovered following issues:
+
+* Do not attempt to power servo motors without having battery connected. The servos simply drain too many amps which causes CHIP to power off if the power is supplied only over USB cable. This will not damage CHIP or your computer's USB ports, this is simply USB ports safety mechanism to prevent overcurrent.
+* Certain USB 3.0 enabled motherboards have trouble connecting to CHIP over USB cable or the connection is occasionally lost under Ubuntu. Try to disable USB 3.0 in BIOS.
+
+Powering the robot:
+
+* Powering CHIP up while power supply pins 3.3V or 5V are shorted to ground or to eachother will cause AXP209 power supply IC to die. Carefully examine with a multimeter that 3.3V, 5V and ground rails are not connected to eachother.
+* Reversing the battery polarity irreversable damages AXP209 power supply IC on the CHIP. Be extra careful when connecting the battery.
+* If the CHIP remains powered on only for few seconds or if AXP209 heats up too much then it's likely that AXP209 has been damaged by one of the ways mentioned above.
+
+If you have fried your AXP209, you can try to replace it with a new one.
+
 ##About
 
 <a href="http://robot.itcollege.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/robo-eng.svg"/></a>
