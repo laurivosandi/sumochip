@@ -85,7 +85,7 @@ Powering the robot:
 * Reversing the battery polarity irreversable damages AXP209 power supply IC on the CHIP. Be extra careful when connecting the battery.
 * If the CHIP remains powered on only for few seconds or if AXP209 heats up too much then it's likely that AXP209 has been damaged by one of the ways mentioned above.
 
-If you have fried your AXP209, you can try to replace it with a new one.
+If you have fried your AXP209, you can try to replace it with a new one. Damaged AXP209 can lead to battery drainage which can lead to irreversible battery damage or in extreme cases make the battery explode.
 
 ##About
 
