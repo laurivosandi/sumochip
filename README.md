@@ -3,8 +3,7 @@
 SumoCHIP is an extremely low-budget robotics platform based on CHIP single-board
 computer developed by [Robotics Club of Estonian IT College](http://robot.itcollege.ee).
 SumoCHIP is designed for teaching soldering, electronics, programming
-and networking. We kept SumoCHIP daughterboard PCB design single-sided so it
-would be easy to etch at home or school.
+and networking.
 
 ![Sumo](doc/img/sumo.png)
 
