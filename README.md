@@ -8,25 +8,32 @@ would be easy to etch at home or school.
 
 ![Sumo](doc/img/sumo.png)
 
+
 <img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/esf-eng.svg"/><a href="http://hitsa.ee/en"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/hitsa-eng.svg"/></a><a href="http://www.progetiiger.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/progetiiger.svg"/></a>
-
-##Demo
-
-<a href="https://youtu.be/Hw_wJBUtGzg" target="_blank"><img src="http://img.youtube.com/vi/Hw_wJBUtGzg/0.jpg"/></a>
-
-*Sumorobots battling*
 
 ##Documentation
 
-Documentation is available [here](doc/index.md).
+Bill of materials, instructions for building the robot and setting up the software are available [here](doc/index.md).
 Translations are very much welcome.
 See below how you can contribute!
+
+
+##Demo
+
+This is how the robot looks like once assembled:
+
+![SumoCHIP assembled](doc/img/kit/62-connecting-via-usb.jpg)
+
+Here's a video of two sumorobots battling in the sumo ring:
+
+<a href="https://youtu.be/Hw_wJBUtGzg" target="_blank"><img src="http://img.youtube.com/vi/Hw_wJBUtGzg/0.jpg"/></a>
 
 
 ##Kits
 
 Being completely open hardware you can order the components and assemble the
-robot yourself with the prices stated in the [bill of materials](doc/bom.md) page.
+robot yourself with the prices stated in the [bill of materials](doc/bom.md) page,
+expect to spend around 30 USD per robot.
 Robotics Club of Estonian IT College provides kits within EU which saves
 you the hassle of purchasing invidual components online.
 
