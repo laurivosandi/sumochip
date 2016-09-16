@@ -1,0 +1,158 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 744.09 1052.4">
+ <g transform="translate(17.894 -17.894)">
+  <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+  <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+  <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+  <g stroke="#000">
+   <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+   <g>
+    <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+    <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+    <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+    <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+    <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+    <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+    <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+    <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+    <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+    <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+    <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+    <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+    <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+    <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+    <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+   </g>
+  </g>
+  <g transform="translate(-2.0311e-7 -354.33)">
+   <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+   <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+   <g stroke="#000">
+    <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+    <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+    <g>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+     <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+    </g>
+   </g>
+  </g>
+  <g transform="translate(-2.0767e-7 -690.94)">
+   <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+   <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+   <g stroke="#000">
+    <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+    <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+    <g>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+     <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+    </g>
+   </g>
+  </g>
+  <g transform="translate(354.33 -.000030175)">
+   <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+   <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+   <g stroke="#000">
+    <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+    <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+    <g>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+     <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+    </g>
+   </g>
+  </g>
+  <g transform="translate(354.33 -354.33)">
+   <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+   <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+   <g stroke="#000">
+    <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+    <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+    <g>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+     <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+    </g>
+   </g>
+  </g>
+  <g transform="translate(354.33 -690.94)">
+   <path d="m0 804.33h67.323v-70.866h212.6v70.866h67.323v177.17l-67.323-0.00001v70.866h-212.6v-70.866l-67.32-0.03z" fill-opacity="0" stroke="#000" stroke-width=".35433"/>
+   <path d="m0 892.91h347.24" stroke="#000" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+   <text style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="20px" line-height="125%" y="886.12769" x="173.62206" font-family="Sans" xml:space="preserve" fill="#000000"><g font-size="22px"><tspan y="886.12769" x="173.62206">Cut by solid line</tspan><tspan y="913.62769" x="173.62206">Lõika pideva joone järgi</tspan><tspan y="941.12769" x="173.62206">Fold by dashed line</tspan><tspan y="968.62769" x="173.62206">Voldi katkendjoone järgi</tspan><tspan y="996.12769" x="173.62206">Drill 3mm holes</tspan><tspan y="1023.6277" x="173.62206">Puuri 3mm augud</tspan></g></text>
+   <g stroke="#000">
+    <path d="m67.323 804.33h212.6" stroke-dasharray="0.70866142, 0.70866142" stroke-width=".35433" fill="none"/>
+    <path d="m67.323 981.5h212.6" stroke-dasharray="0.35433071, 0.35433071" stroke-width=".17717" fill="none"/>
+    <g>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 160.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m105.53 46.063h10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m110.62 40.949v10.102" transform="translate(0 733.46)" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 286.92 782.41)" stroke-width=".66999" fill="#f00"/>
+     <path d="m231.53 779.53h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m236.62 774.41v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 223.92 832.02)" stroke-width=".66999" fill="#f00"/>
+     <path d="m168.53 829.13h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m173.62 824.02v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 85.731 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m30.34 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m35.433 824.08v10.102" stroke-width=".35433" fill="none"/>
+     <path d="m-58.397-5.9238a6.6027 10.486 0 0 1 -6.603 10.486 6.6027 10.486 0 0 1 -6.603 -10.486 6.6027 10.486 0 0 1 6.603 -10.485 6.6027 10.486 0 0 1 6.6027 10.486z" fill-rule="evenodd" transform="matrix(.77381 0 0 .48726 362.11 832.08)" stroke-width=".66999" fill="#f00"/>
+     <path d="m306.72 829.2h10.102" stroke-width=".35433" fill="none"/>
+     <path d="m311.81 824.08v10.102" stroke-width=".35433" fill="none"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

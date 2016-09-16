@@ -43,7 +43,9 @@ Lisa teine kere plaat ning kinnita see poltidega:
 
 ###Saha monteerimine
 
-Prindi saha šabloon kleebitavale paberile. Kleebi prinditud šabloon alumiiniumlehe kaitsekilele. Lõika plekikääridega välja sahk. Aseta sahk katkendjoone järgi kruustangide vahele nagu näidatud pildil:
+Prindi [saha šabloon](../plow.svg) kleebitavale A4 mõõdus paberile.
+Kleebi prinditud šabloon alumiiniumlehe kaitsekilele.
+Lõika plekikääridega välja sahk. Aseta sahk katkendjoone järgi kruustangide vahele nagu näidatud pildil:
 
 ![Bottom attached](../img/kit/20-plow.jpg)
 

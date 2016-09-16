@@ -40,7 +40,9 @@ Add the second body panel and fasten it with bolts
 
 ###Making the plow
 
-Print the template onto adhesive paper. Apply the printed template to the protective film on top of the aluminium sheet. Use metal shears to cut out the plow.
+Print the [plow template](../plow.svg) onto [A4 sized](https://en.wikipedia.org/wiki/Paper_size#A_series) adhesive sheet of paper.
+Apply the printed template to the protective film on top of the aluminium sheet.
+Use metal shears to cut out the plow.
 Place the plow into vice grips so it lines up with the dashed line as shown on the picture
 
 ![Bottom attached](../img/kit/20-plow.jpg)
