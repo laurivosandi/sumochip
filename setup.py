@@ -20,7 +20,8 @@ setup(
         "axp209",
         "chip-io",
         "flask",
-        "flask-sockets"
+        "flask-sockets",
+        "pid"
     ],
     include_package_data = True,
     entry_points={'console_scripts': ['sumochip_web = sumochip.webapp:main', 'sumochip_test = sumochip.sumorobot:main']},

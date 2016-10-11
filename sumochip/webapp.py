@@ -1,6 +1,6 @@
 from __future__ import print_function
 from flask import Flask, render_template
-from sumorobot import Sumorobot, SensorThread
+from sumorobot import Sumorobot, SensorThread, lock
 from flask_sockets import Sockets
 from threading import Thread
 from time import sleep
@@ -112,6 +112,7 @@ def command(ws):
 
 
 def main():
+    lock()
     from gevent import pywsgi
     from geventwebsocket.handler import WebSocketHandler
     ip, port = ('0.0.0.0', 5001)
