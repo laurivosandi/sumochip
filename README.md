@@ -5,8 +5,7 @@ computer developed by [Robotics Club of Estonian IT College](http://robot.itcoll
 SumoCHIP is designed for teaching soldering, electronics, programming
 and networking.
 
-![Sumo](doc/img/sumo.png)
-
+![Sumo](doc/img/assembly.gif)
 
 <img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/esf-eng.svg"/><a href="http://hitsa.ee/en"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/hitsa-eng.svg"/></a><a href="http://www.progetiiger.ee/"><img src="https://rawgithub.com/laurivosandi/sumochip/master/doc/img/logo/progetiiger.svg"/></a>
 
