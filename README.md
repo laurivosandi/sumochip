@@ -79,6 +79,8 @@ We are aware of following issues:
 * Do not attempt to power servo motors without having battery connected. The servos simply drain too many amps which causes CHIP to power off if the power is supplied only over USB cable. This will not damage CHIP or your computer's USB ports, this is simply USB ports safety mechanism to prevent overcurrent.
 * Certain USB 3.0 enabled motherboards have trouble connecting to CHIP over USB cable or the connection is occasionally lost under Ubuntu. Try to disable USB 3.0 in BIOS.
 * Enemy detection sensors in their current form are very sensitive. Ambient light, especially direct sunlight triggers the phototransistors making it nearly impossible to use the robots outdoors. Proper shielding of phototransistors with black shrinktubes is crucial, use blinds to cover direct sunlight if necessary. Alternative sensors would increase the price of the robot significantly, that's the main reason why we sticked to primitive infrared LED and phototransistor pair method.
+* Under Ubuntu add your user account to `dialout` group, log out from your desktop session and log in again. Otherwise your user account is unable to make use of the serial connection to CHIP, resulting in error `cannot open /dev/ttyACM0`.
+* Running `sumochip_test` while the web interface is running in the background causes jerky behaviour, stop web interface first `systemctl stop sumochip`.
 
 Powering the robot:
 
