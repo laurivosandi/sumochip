@@ -79,7 +79,7 @@ We are aware of following issues:
 * Certain USB 3.0 enabled motherboards have trouble connecting to CHIP over USB cable or the connection is occasionally lost under Ubuntu. Try to disable USB 3.0 in BIOS.
 * Enemy detection sensors in their current form are very sensitive. Ambient light, especially direct sunlight triggers the phototransistors making it nearly impossible to use the robots outdoors. Proper shielding of phototransistors with black shrinktubes is crucial, use blinds to cover direct sunlight if necessary. Alternative sensors would increase the price of the robot significantly, that's the main reason why we sticked to primitive infrared LED and phototransistor pair method.
 * Under Ubuntu add your user account to `dialout` group, log out from your desktop session and log in again. Otherwise your user account is unable to make use of the serial connection to CHIP, resulting in error `cannot open /dev/ttyACM0`.
-* Running `sumochip_test` while the web interface is running in the background causes jerky behaviour, stop web interface first `systemctl stop sumochip`.
+* Running `sumochip-test` while the web interface is running in the background causes jerky behaviour, stop web interface first `systemctl stop sumochip`.
 
 Powering the robot:
 

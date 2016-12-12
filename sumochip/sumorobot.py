@@ -52,14 +52,14 @@ class AttributeDict(dict):
 class ChipIOMotor(object):
     _speed = 0
 
-    def __init__(self, pin, freq=500, duty_min=49.0, duty_max=90.0, stop_on_zero=False):
+    def __init__(self, pin, freq=50, duty_min=5, duty_max=10, stop_on_zero=False):
         self.pin = pin
         self.freq = freq
         self.duty_min = duty_min
         self.duty_max = duty_max
         self.stop_on_zero = stop_on_zero
         sleep(0.1)
-        PWM.start(pin, 0, 500)
+        PWM.start(pin, 0, freq)
 
     @property
     def speed(self):

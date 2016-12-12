@@ -11,7 +11,7 @@ setup(
     description = "SumoCHIP is an extremely low-budget robotics platform based on CHIP single-board computer",
     license = "MIT",
     keywords = "sumorobot robot nextthingco getchip allwinner arm python flask",
-    url = "http://github.com/laurivosandi/sumochip",
+    url = "http://github.com/eik-robo/sumochip",
     packages=[
         "sumochip",
     ],
@@ -23,8 +23,9 @@ setup(
         "flask-sockets",
         "pid"
     ],
+    scripts=["bin/sumochip-setup"],
     include_package_data = True,
-    entry_points={'console_scripts': ['sumochip_web = sumochip.webapp:main', 'sumochip_test = sumochip.sumorobot:main']},
+    entry_points={'console_scripts': ['sumochip-web = sumochip.webapp:main', 'sumochip-test = sumochip.sumorobot:main']},
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
@@ -33,8 +34,5 @@ setup(
         "Programming Language :: Python",
         'Programming Language :: Python :: 2',
         "Programming Language :: Python :: 2.7",
-    ],
-    data_files=[
-        ("lib/systemd/system", ["sumochip.service"])
     ]
 )

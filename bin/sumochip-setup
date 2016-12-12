@@ -1,0 +1,86 @@
+#!/bin/bash
+HOSTNAME=sumochip-$(cat /sys/class/net/wlan0/address | cut -d ":" -f 4- | sed -e "s/://g")
+
+# Normalize hosts entry
+sed -i -r -e "s/127.0.0.1\s+chip/127.0.1.1 chip/g" /etc/hosts
+sed -i -r -e "s/127.0.1.1\s+.*/127.0.1.1 $HOSTNAME/g" /etc/hosts
+echo $HOSTNAME > /etc/hostname
+hostname -F /etc/hostname
+echo "Hostname set to $HOSTNAME"
+
+cat > /etc/sumorobot/sumorobot.ini << EOF
+[webapp]
+host = 0.0.0.0
+port = 80
+
+[sumorobot]
+axp209 = 0
+
+[ChipIO]
+motor_stop_on_zero_speed = false
+motor_left_cal =  50, 1, 8
+motor_right_cal = 50, 1, 8
+motor_left = LCD-D23
+motor_right = LCD-CLK
+enemy_left = CSID3
+enemy_right = CSID5
+
+[PythonIO]
+motor_left = 119
+motor_right = 120
+sensor_power = 122
+enemy_left = 135
+enemy_right = 137
+line_left = 136
+line_right = 132
+line_front = 134
+EOF
+
+case $(uname -r) in
+    4.4.*)
+        echo "green_led = 1022" >> /etc/sumorobot/sumorobot.ini
+        echo "yellow_led = 1020" >> /etc/sumorobot/sumorobot.ini
+        echo "red_led = 1018" >> /etc/sumorobot/sumorobot.ini
+        echo "blue_led = 1016" >> /etc/sumorobot/sumorobot.ini
+    ;;
+    4.3.*)
+        echo "green_led = 408" >> /etc/sumorobot/sumorobot.ini
+        echo "yellow_led = 410" >> /etc/sumorobot/sumorobot.ini
+        echo "red_led = 412" >> /etc/sumorobot/sumorobot.ini
+        echo "blue_led = 414" >> /etc/sumorobot/sumorobot.ini
+    ;;
+esac
+
+echo "Configuration file generated at /etc/sumochip/sumochip.conf"
+
+
+cat > /lib/systemd/system/sumochip.service << EOF
+[Unit]
+Description=SumoCHIP web interface
+Documentation=https://github.com/laurivosandi/sumochip
+AssertPathExists=/etc/sumorobot/sumorobot.ini
+
+[Service]
+Environment=PYTHONUNBUFFERED=true
+ExecStart=/usr/local/bin/sumochip-web
+Nice=-10
+IOSchedulingClass=realtime
+IOSchedulingPriority=0
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=99
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable sumochip
+systemctl restart sumochip
+
+echo "Web interface service installed and started"
+
+
+IPv4=$(ip addr show wlan0 | grep "inet " | xargs | cut -d ' ' -f 2 | cut -d "/" -f 1)
+echo "In a web browser open http://$HOSTNAME or http://$IPv4"

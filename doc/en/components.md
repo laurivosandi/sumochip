@@ -4,21 +4,23 @@ The following list contains the components and their approximate cost with shipp
 
 | Picture                               | Description                            | Quantity | Total      |
 |---------------------------------------|----------------------------------------|----------|------------|
-| ![CHIP](../img/chip.png)                 | NextThingCo C.H.I.P.                   | 10pcs    |  94.32 EUR |
-| ![Servo](../img/pservo.png)              | Plastik hammasratastega servo FS90R    | 20pcs    |  63.63 EUR |
-| ![Spoked wheel](../img/spoked-wheel.png) | Rattad                                 | 20pcs    |  34.70 EUR |
-| ![LiPo](../img/lipo.png)                 | Liitiumpolümeeraku 3.7V 1100mAh        | 10pcs    |  51.46 EUR |
-| ![PCB](../img/sumochip.png)              | SumoCHIP trükkplaat MakerStudiost      | 10pcs    |  15.20 EUR |
-| ![IR](../img/ir-led.png)                 | Infrared emitter and receiver          | 50 pairs |   3.91 EUR |
-| ![SMD resistor](../img/smd-resistor.jpg) | 100 ohm resistors                      | 120pcs   |   1.20 EUR |
-| ![SMD resistor](../img/smd-resistor.jpg) | 10k ohm resistors                      | 30pcs    |   0.60 EUR |
-| ![SMD resistor](../img/smd-resistor.jpg) | 100k ohm resistors                     | 50pcs    |   0.60 EUR |
-| ![Header](../img/straight-header.jpg)    | 40-pin 2.54mm male straight header     | 13pcs    |   1.02 EUR |
-| ![Header](../img/angled-header.jpg)      | 40-pin 2.54mm male angled header       | 1pcs     |   0.44 EUR |
-| ![SMD LED](../img/smd-led.jpg)           | LED-ide assortii                       | 50pcs    |   0.98 EUR |
-| ![2N7000](../img/2n7000.jpg)             | 60V 200mA N-channel MOSFET             | 10pcs    |   0.85 EUR |
-|                                       |                                        | Total:   | 270    EUR |
-|                                       |                                        |Per Robot:|  27    EUR |
+| ![CHIP](../img/chip.png)              | NextThingCo C.H.I.P.                   | 10pcs    |  94.32 EUR |
+| ![Servo](../img/pservo.png)           | Plastik hammasratastega servo FS90R    | 20pcs    |  63.63 EUR |
+| ![Wheel](../img/spoked-wheel.png)     | Rattad                                 | 20pcs    |  34.70 EUR |
+| ![LiPo](../img/lipo.png)              | Liitiumpolümeeraku 3.7V 1100mAh        | 10pcs    |  51.46 EUR |
+| ![PCB](../img/sumochip.png)           | SumoCHIP trükkplaat MakerStudiost      | 10pcs    |  15.20 EUR |
+| ![30mm](../img/m3-30mm.jpg)           | 30mm M3 standoffs                      | 40pcs    |   6.63 EUR |
+| ![20mm](../img/m3-20mm.jpg)           | 20mm M3 standoffs                      | 40pcs    |   5.17 EUR |
+| ![IR](../img/ir-led.png)              | Infrared emitter and receiver          | 50 pairs |   3.91 EUR |
+| ![R100](../img/resistor.jpg)          | 100 ohm resistors                      | 120pcs   |   1.20 EUR |
+| ![R10k](../img/resistor.jpg)          | 10k ohm resistors                      | 30pcs    |   0.60 EUR |
+| ![R100k](../img/resistor.jpg)         | 100k ohm resistors                     | 50pcs    |   0.60 EUR |
+| ![Header](../img/straight-header.jpg) | 40-pin 2.54mm male straight header     | 13pcs    |   1.02 EUR |
+| ![Header](../img/angled-header.jpg)   | 40-pin 2.54mm male angled header       | 1pcs     |   0.44 EUR |
+| ![SMD LED](../img/smd-led.jpg)        | LED-ide assortii                       | 50pcs    |   0.98 EUR |
+| ![2N7000](../img/2n7000.jpg)          | 60V 200mA N-channel MOSFET             | 10pcs    |   0.85 EUR |
+|                                       |                                        | Total:   | ~280   EUR |
+|                                       |                                        |Per Robot:|  ~28   EUR |
 
 Robot components URLs:
 
@@ -35,6 +37,8 @@ Robot components URLs:
 - http://www.aliexpress.com/item/2-Pcs-40-Position-2-54mm-Pitch-Single-Row-Right-Angle-Male-Pin-Header/32241048789.html
 - http://www.aliexpress.com/item/Free-shipping-100pcs-3mm-LED-Light-White-Yellow-Red-Green-Blue-Assorted-Kit-DIY-LEDs-Set/32568914032.html
 - http://www.aliexpress.com/item/12pcs-2N7000-MOSFET-N-CH-60V-200MA-TO-92-NEW-GOOD-QUALITY/32390351935.html
+- https://www.aliexpress.com/item/50Pcs-lot-M3-Male-6mm-x-M3-Female-20mm-Brass-Standoff-Spacer-M3-20-6-Bolts/32674686691.html
+- https://www.aliexpress.com/item/20Pcs-lot-M3-Male-6mm-x-M3-Female-30mm-Brass-Standoff-Spacer-M3-30-6-Bolts/32674670811.html
 
 ###Alternative components
 

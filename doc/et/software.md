@@ -25,6 +25,9 @@ Kuna CHIP-il pole videoväljundeid on kuvari ühendamine problemaatiline. Eelist
 
 ![Serial](../img/kit/62-connecting-via-usb.jpg)
 
+Enne tarkvara paigaldust oleks hea CHIP-i operatsioonisüsteem paigaldada nullist vastavalt CHIP-i tootja
+juhenditele [siin](http://flash.getchip.com/). Tõmmiste nimekirjast vali 4.4 headless.
+
 ###Ohjurtarkvara paigaldus
 
 Ubuntu ning Mac OS X all ohjurtarkvara paigaldada pole vaja, Windowsi puhul on asi mõnevõrra keerukam. Ava *Device Manager*:
@@ -116,59 +119,49 @@ Kuna CHIP-il pole akut ega kella mis aja üle arvestust peaks püüab CHIP peale
 date
 ```
 
+Kui kell on vale siis HTTPS ühendused kipuvad mitte toimima, selleks et kell saada õigeks veendu et CHIP-il on võrguühendus ning tee CHIP-ile taaskäivitus:
+
+```bash
+reboot
+```
 
 ###Operatsioonisüsteemi uuendamine
 
 Kui võrguühendus on olemas võime teha CHIP-i operatsioonisüsteemile tarkvarauuenduse:
 
 ```bash
-apt update       # Uuenda pakettide nimekirju
+apt update         # Uuenda pakettide nimekirju
 apt full-upgrade   # Uuenda pakette
 ```
 
 
 ### Sõltuvuste paigaldamine
 
-Paigalda sõltuvused ning Git versioonihaldustarkvara:
+Paigalda sumoroboti tarkvara sõltuvused ning Git versioonihaldustarkvara:
 
 ```bash
-apt install python-pip python-dev git
+apt install -y python-pip python-dev git unzip
+pip install chip-io flask flask-sockets pid axp209
 ```
 
 ###Sumoroboti tarkvara paigaldus
 
-Seejärel võime paigaldada sumoroboti tarkvara:
+Seejärel võime paigaldada sumoroboti tarkvara, järgnev laadib alla kõige värskema versiooni
+GitHubist:
 
 ```bash
-pip install sumochip
-```
-
-Kui kõik on seni sujuvalt kulgenud võib välja uurida mis IP aadressil CHIP asub. Selleks saab kasutada käsku:
-
-```bash
-ifconfig
-```
-
-Proovi algatada SSH ühendus robotisse, Windowsis saab selleks kasutada PuTTY-t ning UNIX-iliste all:
-
-```bash
-ssh <ip-aadress>
+wget https://github.com/laurivosandi/sumochip/archive/master.zip
+unzip master.zip
+cd sumochip-master
+pip install .
 ```
 
 ###Sumoroboti tarkvara seadistamine
 
-Paigalda konfiguratsioonifail mis ütleb mis jalgade külge servomootorid ja sensorid ühendatud on:
+Kui kõik on seni sujuvalt kulgenud võib teha sumoroboti tarkvarale esmase seadistuse:
 
 ```bash
-mkdir -p /etc/sumorobot/
-curl https://raw.githubusercontent.com/artizirk/sumochip/master/sumochip/config/sumochip_v1.1.ini > /etc/sumorobot/sumorobot.ini
-```
-
-
-Käivita testprogramm, katkestamiseks vajuta jällegi Ctrl-C:
-
-```bash
-sumochip_test
+sumorobot-setup
 ```
 
 Kontrolli, et jooneandurite LED-id toimivad. Selleks vaata jooneanduritesse mobiiltelefoni kaamera kaudu. Kaameras paistab infrapuna violetsena:
@@ -179,32 +172,11 @@ Soorita sama kontroll ka vastase tuvastamise sensoritel:
 
 ![Checking enemy sensors](../img/kit/64-checking-enemy-sensors.jpg)
 
+Aku kontrollimiseks saab kasutada käsku:
 
-
-Proovi käivitada ka veebiliides:
-
-```bash
-sumochip_web
-```
-
-Kui soov on jooksutada robotit aku pealt siis tuleb jooksutada käsku:
-
-
-```bash
-systemctl start sumochip
-```
-
-Selleks, et aktiveerida sumochip kasuta käsku:
-```bash
-systemctl enable sumochip -- pikaajaline ON seisund
-```
-
-
-Selleks et kontrollida kas aku on roboti peal asuvast lülitist kasutada käsku:
 ```bash
 axp209
 ```
-
 
 Kui on vaja robotit viisakalt kinni panna siis selle jaoks saab kasutada käsku:
 
