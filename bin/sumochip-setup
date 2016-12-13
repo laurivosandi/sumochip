@@ -63,11 +63,11 @@ AssertPathExists=/etc/sumorobot/sumorobot.ini
 [Service]
 Environment=PYTHONUNBUFFERED=true
 ExecStart=/usr/local/bin/sumochip-web
-Nice=-10
-IOSchedulingClass=realtime
-IOSchedulingPriority=0
-CPUSchedulingPolicy=rr
-CPUSchedulingPriority=99
+#Nice=-10
+#IOSchedulingClass=realtime
+#IOSchedulingPriority=0
+#CPUSchedulingPolicy=rr
+#CPUSchedulingPriority=99
 Restart=on-failure
 RestartSec=3s
 
