@@ -8,6 +8,7 @@ echo $HOSTNAME > /etc/hostname
 hostname -F /etc/hostname
 echo "Hostname set to $HOSTNAME"
 
+mkdir -p /etc/sumorobot
 cat > /etc/sumorobot/sumorobot.ini << EOF
 [webapp]
 host = 0.0.0.0
