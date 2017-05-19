@@ -161,7 +161,7 @@ pip install .
 Kui kõik on seni sujuvalt kulgenud võib teha sumoroboti tarkvarale esmase seadistuse:
 
 ```bash
-sumorobot-setup
+sumochip-setup
 ```
 
 Kontrolli, et jooneandurite LED-id toimivad. Selleks vaata jooneanduritesse mobiiltelefoni kaamera kaudu. Kaameras paistab infrapuna violetsena:
